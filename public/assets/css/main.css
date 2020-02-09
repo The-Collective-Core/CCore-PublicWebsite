@@ -3,6 +3,59 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Squada+One&amp;display=swap');
+@charset "UTF-8";
+
+@font-face {
+  font-family: "untitled-font-2";
+  src:url("fonts/untitled-font-2.eot");
+  src:url("fonts/untitled-font-2.eot?#iefix") format("embedded-opentype"),
+    url("fonts/untitled-font-2.woff") format("woff"),
+    url("fonts/untitled-font-2.ttf") format("truetype"),
+    url("fonts/untitled-font-2.svg#untitled-font-2") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-2" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-2" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-navbranchlogi:before {
+  content: "\61";
+}
+.icon-navbranchdiplo:before {
+  content: "\62";
+}
+.icon-navbranchrd:before {
+  content: "\63";
+}
+.icon-navbranchtact:before {
+  content: "\64";
+}
+
 /*
 	SwarmNET
 	swarmnet.org | @Timothy
@@ -15,13 +68,13 @@
 
 #sound_ico {
   color: #fff;
-  font-size: 15px;
+  font-size: 18px;
   width: 150px;
   border-radius: 0 100% 100% 0;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   margin-left: -13px;
-  left: calc(100% - 150px);
+  left: calc(100% - 30px);
   top: calc(100% - 50px);
   opacity: 0.7;
   cursor: crosshair;
@@ -261,7 +314,7 @@ html {
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #ff0000;
+  background: radial-gradient(circle, rgba(41,41,41,1) 45%, rgba(165,21,6,1) 100%);
 }
 
 
@@ -802,6 +855,12 @@ input[type="radio"] + label:before {
   border-radius: 0;
   padding: 0;
 }
+.icon-navbranchlogi, .icon-navbranchdiplo {
+  font-size: 4em;
+}
+.icon-navbranchtact, .icon-navbranchrd {
+  font-size: 3em;
+}
 
 /* Icon */
 
@@ -1337,7 +1396,7 @@ background: #000 url("https://image.ibb.co/mjnygo/stars.png") repeat top center;
   width: 100%;
   height: 100%;
 }
-
+/*
 #bg:before {
   -moz-transition: background-color 2.5s ease-in-out;
   -webkit-transition: background-color 2.5s ease-in-out;
@@ -1373,7 +1432,7 @@ background: #000 url("https://image.ibb.co/mjnygo/stars.png") repeat top center;
       opacity   : 1;
   }
 }
-
+*/
 
 #bg:after {
   -moz-transform: scale(1.125);
@@ -1453,7 +1512,9 @@ body.is-preload #bg:before {
   width: 100%;
   padding: 4rem 2rem;
   z-index: 3;
+  background: radial-gradient(circle, rgba(41,41,41,0) 61%, rgba(165,21,6,1) 100%);
 }
+
 
 #wrapper:before {
   content: "";
@@ -1701,8 +1762,8 @@ transform: scale(1.2);
 
 }
 
-#header nav ul li a:active {
-
+#header nav ul li img {
+text-align: center;
 }
 
 
@@ -2110,63 +2171,37 @@ body.is-preload #footer {
   }
 }
 
-
-
+/*
 .text .st0 {
-  stroke: rgb(0, 0, 0);
-  fill: #fff;
-  stroke-dasharray: 1800;
-  opacity: 10;
-  animation: animate2 3s cubic-bezier(0, 0.23, 1, 0.1);
-  
+  fill: rgba(207, 1, 1, 0.479);
+  transition: all 0.5s ease;
 }
+
+.text .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20, .st21, .st22, .st23, .st24, .st25, .st26, .st27, .st28, .st29, .st30, .st31, .st32, .st33, .st34, .st35, .st36, .st37, .st38, .st39, .st40, .st41, .st42, .st43, .st44, .st45 {
+  stroke: #1d1d1d;
+  stroke-width: 3;
+  stroke-dasharray: 1600;
+  opacity: 10;
+  fill: #1d1d1d;
+}
+
+  animation: animate2 5s cubic-bezier(0, 0.23, 1, 0.1);
 @keyframes animate2 {
   0% {
     opacity: 0;
-    fill: none;
+    fill: rgba(0, 0, 0, 0.1);
     stroke-dashoffset: 1800;
   }
 
-  30% {
-    opacity: 10;
-    fill: none;
-    stroke-dashoffset: 1800;
-    fill: rgba(255, 255, 255, 0);
-  }
+
 
   100% {
     opacity: 10;
-    fill: rgba(255, 255, 255, 1);
+    fill: rgba(0, 0, 0, 0.637);
     stroke-dashoffset: 0;
   }
 }
-.text .st1 {
-  stroke: rgb(253, 251, 251);
-  fill: rgba(196, 1, 1, 0.521);
-  stroke-dasharray: 1800;
-  opacity: 10;
-  animation: animate3 3s cubic-bezier(0, 0.23, 1, 0.1);
-}
-@keyframes animate3 {
-  0% {
-    opacity: 0;
-    fill: none;
-    stroke-dashoffset: 1800;
-  }
-
-  30% {
-    opacity: 10;
-    fill: none;
-    stroke-dashoffset: 1800;
-    fill: rgba(131, 0, 0, 0);
-  }
-
-  100% {
-    opacity: 10;
-    fill: rgba(196, 1, 1, 0.521);
-    stroke-dashoffset: 0;
-  }
-}
+*/
 
 
 .gradient-border {
