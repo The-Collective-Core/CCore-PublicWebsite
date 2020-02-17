@@ -14,7 +14,7 @@ window.onload = function() {
       beep.play();
       music_frame.play();
       music.classList.toggle("do_wave");
-      music.style.left = "calc(100% - 20px)";
+      //music.style.left = "calc(100% - 20px)";//
   
       if (music.classList.contains("do_wave")) {
         music.innerHTML = '<i class="fas fa-volume-up fa-lg"></i>';
