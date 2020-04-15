@@ -2,8 +2,8 @@
     width: 90px; 
     height: 90px; 
     padding: 0.5em; 
-    float: left; 
-    margin: 0 10px 10px 0; 
+    float: left;
+    margin: 0 10px 10px 0;
 }
 .draggable{ 
   width: 90px; 
@@ -72,7 +72,7 @@
       border-radius: 3px;
         /* InitPos */
         left: 1.5rem;
-        top: 4rem;
+        top: 9rem;
         position: absolute;
         width: 6em;
         height: auto;
@@ -86,7 +86,7 @@
         border-radius: 3px;
           /* InitPos */
           left: 1.5rem;
-          top: 6rem;
+          top: 16rem;
           position: absolute;
           width: 6em;
           height: auto;
