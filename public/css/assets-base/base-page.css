@@ -1,10 +1,10 @@
 /*
 |*************************************************************************;
-* Project       : <CorePUB>
-* ScriptPath    : PublicSite\assets\css
-* ScriptDesc    : Global Styles CSS
+* ScriptName    : BasePage Styles
+* ScriptPath    : /css/assets-base/base-page.css
 |*************************************************************************;
 */
+
 html.js,
 .js body {
 	overflow: hidden;
@@ -28,13 +28,7 @@ box-shadow: inset 0px 0px 12px 0px rgba(0,0,0,1);
 
 
 
-::-webkit-scrollbar {
-	width: 0px;  /* remove scrollbar space */
-	background: transparent;  /* optional: just make scrollbar invisible */
-  }
-@-moz-document url-prefix() {
-	html,body{overflow: hidden !important;}
-  }
+
 /* Resets */
 
 *,

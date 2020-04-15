@@ -30,6 +30,11 @@ $(function () {
 		scroll: false,
 		grid: [20, 20],
 	});
+	$("#draggable-JS-06").draggable({
+		containment: ".pages-stack",
+		scroll: false,
+		grid: [20, 20],
+	});
 });
 
 $(document).ready(function () {
@@ -38,7 +43,8 @@ $(document).ready(function () {
 	$("#draggable-JS-02").hide();
 	$("#draggable-JS-03").show();
 	$("#draggable-JS-04").show();
-	$("#draggable-JS-04").show();
+	$("#draggable-JS-05").show();
+	$("#draggable-JS-06").show();
 });
 /**/
 /* Window -Discord */
