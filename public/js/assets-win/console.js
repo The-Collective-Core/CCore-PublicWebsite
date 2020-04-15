@@ -338,7 +338,7 @@
 				case "h":
 				case "help":
 					out =
-						'<table id="tablePreview" class="table table-hover table-sm"> <thead> <tr> <th>Description</th> <th>Command Examples</th> </tr></thead> <tbody> <tr> <td>Find Commands</td><td>[help] - [?] - [h]</td></tr><tr> <td>Clear Terminal</td><td>[cls] - [clear]</td></tr><tr> <td>Open/Close App</td><td>[open/close-discord]</td></tr><tr> <td>Application List</td><td>[app-list]</td></tr><tr> <td>About DEVTeam</td><td>[about-devs]</td></tr><tr> <td>About Collective</td><td>[about-core]</td></tr><tr> <td>About Branches</td><td>[about-branches]</td></tr><tr> <td>Calculate</td><td>[calc 1+2]</td></tr><tr> <td>Google Search</td><td>[google/search Item]</td></tr></tbody> </table>';
+						'<table id="tablePreview" class="table table-hover table-sm"> <thead> <tr> <th>Description</th> <th>Command Examples</th> </tr></thead> <tbody> <tr> <td>Find Commands</td><td>[help] - [?] - [h]</td></tr><tr> <td>Clear Terminal</td><td>[cls] - [clear]</td></tr><tr> <td>Open/Close App</td><td>[open/close app]</td></tr><tr> <td>Application List</td><td>[app-list]</td></tr><tr> <td>About DEVTeam</td><td>[about-devs]</td></tr><tr> <td>About Collective</td><td>[about-core]</td></tr><tr> <td>About Branches</td><td>[about-branches]</td></tr><tr> <td>Calculate</td><td>[calc 1+2]</td></tr><tr> <td>Google Search</td><td>[google/search Item]</td></tr></tbody> </table>';
 					break;
 				/* CMD- Calc */
 				case "calc":
