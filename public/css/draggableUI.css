@@ -1,0 +1,233 @@
+.draggable { 
+    width: 90px; 
+    height: 90px; 
+    padding: 0.5em; 
+    float: left; 
+    margin: 0 10px 10px 0; 
+}
+.draggable{ 
+  width: 90px; 
+  height: 90px; 
+  padding: 0.5em; 
+  float: left; 
+  margin: 0 10px 10px 0; 
+}
+#containment-wrapper { 
+    width:100%; 
+    height:100%; 
+  }
+
+/* Draggable Window Style */
+
+  .draggableStyle01 {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 3px;
+    /* InitPos */
+    left: 20rem;
+    top: 10rem;
+
+    position: absolute;
+    width: 200px;
+    height: 400px;
+  
+    float: right;
+    margin: 0px 0px 0px 0px;
+    font-size: .9em;
+    pointer-events: painted;
+  }
+  .draggableStyle02 {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 3px;
+    /* InitPos */
+    left: 20rem;
+    top: 10rem;
+    position: absolute;
+    width: 200px;
+    height: 400px;
+  
+    float: right;
+    margin: 0px 0px 0px 0px;
+    font-size: .9em;
+    pointer-events: painted;
+  }
+  .draggableStyle03 {
+    border-radius: 3px;
+      /* InitPos */
+      left: 1.5rem;
+      top: 2rem;
+      position: absolute;
+      width: 6em;
+      height: auto;
+    
+      float: right;
+      margin: 0px 0px 0px 0px;
+      font-size: .9em;
+      pointer-events: painted;
+    }
+    .draggableStyle04 {
+      border-radius: 3px;
+        /* InitPos */
+        left: 1.5rem;
+        top: 4rem;
+        position: absolute;
+        width: 6em;
+        height: auto;
+      
+        float: right;
+        margin: 0px 0px 0px 0px;
+        font-size: .9em;
+        pointer-events: painted;
+      }
+      .draggableStyle05 {
+        border-radius: 3px;
+          /* InitPos */
+          left: 1.5rem;
+          top: 6rem;
+          position: absolute;
+          width: 6em;
+          height: auto;
+        
+          float: right;
+          margin: 0px 0px 0px 0px;
+          font-size: .9em;
+          pointer-events: painted;
+        }
+    .card {
+      background-color: transparent;
+      text-align: center;
+      /* 
+      border: 1px solid rgba(0, 0, 0, 0.24);
+      border-radius: .25rem;
+      -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75); */
+    }
+    .card-body {
+      padding: 0rem;
+    }
+    .card-img, .card-img-top {
+      width: 4em;
+    }
+  
+
+  
+  .draggableStyle01 .modal-header .close {
+    padding: 0px;
+    color: #fff;
+    margin: 0rem 0rem 0rem auto;
+  }
+  
+  .draggableStyle02 .modal-header .close {
+    padding: 0px;
+    color: #fff;
+    margin: 0rem 0rem 0rem auto;
+    }
+  
+  .draggableStyle03 .modal-header .close {
+    padding: 0px;
+    color: #fff;
+    margin: 0rem 0rem 0rem auto;
+    }
+    
+  
+
+
+    /* Proper Style */
+    .window {
+      max-width: 600px;
+      min-width: 420px;
+  
+    }
+    
+    .microsoft {
+      font-family: 'Raleway', sans-serif;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+  .ui-widget-content {
+    border: 1px solid rgb(15, 15, 15)!important;
+    background-color: rgba(29, 31, 32, 0.75);
+  }
+    .microsoft .header {
+      font-family: var(--main-font);
+      font-size: 1rem;
+      display: flex;
+      color: #C21423;
+      font-weight: 100;
+      background: rgb(15, 15, 15);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+      cursor: grab;
+    }
+    .close {
+      color: #C21423;
+    }
+    .microsoft .header .sub-menu-title {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      padding: 0px 10px;
+      display: flex;
+    }
+    .microsoft .header .sub-menu-title .icon {
+      width: 30px;
+      position: relative;
+      display: inline-block;
+    }
+    .microsoft .header .sub-menu-title .text {
+      height: 25px;
+      position: relative;
+      padding: 0px 8px;
+      line-height: 25px;
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .microsoft .header .buttons {
+      display: flex;
+      width: 160px;
+      height: 30px;
+    }
+    .microsoft .header .buttons .btn {
+      flex: 1;
+      text-align: center;
+    }
+    .microsoft .header .buttons .btn:hover {
+      cursor: pointer;
+      color: #C21423;
+    }
+    #close00:hover {
+      color: #000;
+    }
+    #close02:hover {
+      color: #000;
+    }
+    #close01:hover {
+      color: #000;
+    }
+    .microsoft .header .buttons .btn:hover.minus {
+      background: rgba(0, 0, 0, 0.25);
+    }
+    .microsoft .header .buttons .btn:hover.expand {
+      background: rgba(0, 0, 0, 0.25);
+    }
+    .microsoft .header .buttons .btn:hover.close {
+      background: rgba(150, 0, 0, 0.5);
+    }
+    .microsoft .header .buttons .btn i {
+      position: relative;
+      display: inline-block;
+      font-size: 20px;
+    }
+    /*
+    .microsoft .form {
+      background: rgba(255, 255, 255, 0.1);
+    }*/
+
+    .vector-main {
+      width: 100%;
+    }
+    #discord-widget > div > div.widgetHeader-2Hz_Ln {
+      background-color: #c21217;
+    }
