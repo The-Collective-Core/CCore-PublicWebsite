@@ -2,31 +2,31 @@
 $(function () {
 	$("#draggable-JS-00").draggable({
 		snap: ".application",
-		containment: "body",
+		containment: ".pages-stack",
 		scroll: false,
 	});
 	$("#draggable-JS-01").draggable({
 		snap: ".application",
-		containment: "body",
+		containment: ".pages-stack",
 		scroll: false,
 	});
 	$("#draggable-JS-02").draggable({
 		snap: ".application",
-		containment: "body",
+		containment: ".pages-stack",
 		scroll: false,
 	});
 	$("#draggable-JS-03").draggable({
-		containment: "body",
+		containment: ".pages-stack",
 		scroll: false,
 		grid: [20, 20],
 	});
 	$("#draggable-JS-04").draggable({
-		containment: "body",
+		containment: ".pages-stack",
 		scroll: false,
 		grid: [20, 20],
 	});
 	$("#draggable-JS-05").draggable({
-		containment: "body",
+		containment: ".pages-stack",
 		scroll: false,
 		grid: [20, 20],
 	});
