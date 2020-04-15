@@ -1,0 +1,20 @@
+@import url(lib-css/fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
+@import url('https://fonts.googleapis.com/css?family=Squada+One&amp;display=swap');
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
+/* Local Variables */ 
+:root {
+/* Fonts */
+  --main-font: 'Squada One', cursive;
+
+  --sub-font: 'VT323', monospace;
+  /* Color */
+  --main-color-1: #282828;
+  --main-color-2: #282b2f;
+  --main-color-3: #000;
+  --main-color-4: #e0d9d9;
+  /* Base Properties */
+  --main-zindex-0: 0;
+  --main-zindex-1: 1;
+}
