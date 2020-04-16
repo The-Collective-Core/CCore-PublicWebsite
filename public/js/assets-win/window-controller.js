@@ -48,7 +48,7 @@ appController.add("draggable-JS-01", "corecli", {
 		out = "Type 'help' for more information.";
 	},
 });
-appController.add("draggable-JS-02", "unnamed", {
+appController.add("draggable-JS-02", "branches", {
 	onOpen: () => {},
 	onClose: () => {},
 });
