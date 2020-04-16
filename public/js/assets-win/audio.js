@@ -438,7 +438,7 @@ var Controls = {
 	initHandlers: function () {
 		this.initPlayButton();
 		this.initPauseButton();
-		this.initSoundButton();
+		this.initAudioSlider();
 		this.initPrevSongButton();
 		this.initNextSongButton();
 		this.initTimeHandler();
@@ -466,18 +466,12 @@ var Controls = {
 		});
 	},
 
-	initSoundButton: function () {
-		var that = this;
-		this.soundButton = document.querySelector(".soundControl");
-		this.soundButton.addEventListener("mouseup", function () {
-			if (that.soundButton.classList.contains("disable")) {
-				that.soundButton.classList.remove("disable");
-				Player.unmute();
-			} else {
-				that.soundButton.classList.add("disable");
-				Player.mute();
-			}
-		});
+	initAudioSlider: function () {
+		const slider = document.getElementById("volumeSelector");
+		Player.gainNode.gain.value = slider.value / 100;
+		slider.oninput = function () {
+			Player.gainNode.gain.value = this.value / 100;
+		};
 	},
 
 	initPrevSongButton: function () {
