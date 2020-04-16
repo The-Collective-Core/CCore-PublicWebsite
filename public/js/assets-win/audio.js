@@ -11,6 +11,8 @@ var Framer = {
 
 	loadingAngle: 0,
 
+	audioMultLvl: 1,
+
 	init: function (scene) {
 		this.canvas = document.querySelector("canvas");
 		this.scene = scene;
@@ -106,7 +108,7 @@ var Framer = {
 		for (var i = 0, len = ticks.length; i < len; ++i) {
 			var coef = 1 - i / (len * 2.5);
 			var delta =
-				((this.frequencyData[i] || 0) - lesser * coef) *
+				((this.frequencyData[i] * this.audioMultLvl || 0) - lesser * coef) *
 				this.scene.scaleCoef;
 			if (delta < 0) {
 				delta = 0;
@@ -469,8 +471,10 @@ var Controls = {
 	initAudioSlider: function () {
 		const slider = document.getElementById("volumeSelector");
 		Player.gainNode.gain.value = slider.value / 100;
+		Framer.audioMultLvl = (1 - slider.value / 100) / 2.5 + 1;
 		slider.oninput = function () {
 			Player.gainNode.gain.value = this.value / 100;
+			Framer.audioMultLvl = (1 - slider.value / 100) / 2.5 + 1;
 		};
 	},
 
