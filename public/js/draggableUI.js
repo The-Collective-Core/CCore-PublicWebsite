@@ -75,7 +75,7 @@ $(document).ready(function () {
 });
 /* Window -Blank */
 $(document).ready(function () {
-	$("#draggable-JS-05").on("click", function () {
+	$("#draggable-JS-05").on("dblclick", function () {
 		$("#draggable-JS-02").show();
 	});
 });
