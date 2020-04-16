@@ -24,13 +24,20 @@ class AppController {
 		app.onClose();
 	}
 	init() {
-		console.log(this);
+		const dropDown = $("#dropDownMenu");
 		this.apps.forEach((app) => {
 			$("#" + app.id).draggable({
 				snap: ".application",
 				containment: ".pages-stack",
 				scroll: false,
 			});
+			var btn = document.createElement("button");
+			btn.id = "app-button-" + app.name;
+			btn.classList.add("dropdown-item");
+			btn.type = "button";
+			btn.innerText = app.name.toUpperCase();
+			$("#" + btn.id).on("click", app.open);
+			dropDown.append(btn);
 			this.close(app.name);
 		});
 		this.open("corecli");

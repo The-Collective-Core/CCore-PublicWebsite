@@ -53,11 +53,6 @@ $(document).ready(function () {
 /**/
 /* Window -Discord */
 $(document).ready(function () {
-	$("#button00").on("click", function () {
-		$("#draggable-JS-00").show();
-	});
-});
-$(document).ready(function () {
 	$("#draggable-JS-03").on("dblclick", function () {
 		$("#draggable-JS-00").show();
 	});
@@ -68,11 +63,6 @@ $(document).ready(function () {
 	});
 });
 /* Window -CoreCLI */
-$(document).ready(function () {
-	$("#button01").on("click", function () {
-		$("#draggable-JS-01").show();
-	});
-});
 $(document).ready(function () {
 	$("#draggable-JS-07").on("dblclick", function () {
 		$("#draggable-JS-01").show();

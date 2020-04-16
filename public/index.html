@@ -73,12 +73,7 @@
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           APPS
         </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <button id="button01" class="dropdown-item" type="button">CORE-CLI</button>
-          <button id="button00" class="dropdown-item" type="button">DISCORD</button>
-          <div class="dropdown-divider"></div>
-          <button id="button00" class="dropdown-item" type="button">BLANK</button>
-        </div>
+        <div class="dropdown-menu dropdown-menu-right" id="dropDownMenu"></div>
       </div>
     </nav>
     <!-- Containment -->
@@ -99,7 +94,8 @@
             <div class="pause"></div>
             <div class="nextSong"></div>
           </div>
-          <div class="soundControl"></div>
+			 <!-- <div class="soundControl"></div> -->
+			<input type="range" min="0" max="100" value="25" class="soundControl" id="volumeSelector">
           <div class="time">00:00</div>
         </div>
       <!-- Desktop Drag -Icons -->
