@@ -26,6 +26,18 @@ $(function () {
 		scroll: false,
 		grid: [20, 20],
 	});
+	//CoreCLI
+	$("#draggable-JS-08").draggable({
+		containment: ".folder1",
+		scroll: false,
+		grid: [20, 20],
+	});
+	//CoreCLI
+	$("#draggable-JS-09").draggable({
+		containment: ".folder1",
+		scroll: false,
+		grid: [20, 20],
+	});
 });
 
 $(document).ready(function () {
@@ -34,6 +46,9 @@ $(document).ready(function () {
 	$("#draggable-JS-04").show();
 	$("#draggable-JS-05").show();
 	$("#draggable-JS-06").show();
+	$("#draggable-JS-07").show();
+	$("#draggable-JS-08").show();
+	$("#draggable-JS-09").show();
 });
 /**/
 /* Window -Discord */
@@ -70,7 +85,7 @@ $(document).ready(function () {
 });
 /* Window -Blank */
 $(document).ready(function () {
-	$("#button02").on("click", function () {
+	$("#draggable-JS-05").on("click", function () {
 		$("#draggable-JS-02").show();
 	});
 });

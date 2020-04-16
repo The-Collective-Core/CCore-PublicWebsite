@@ -39,7 +39,7 @@ canvas {
     opacity: 0.85;
     vertical-align: middle;
     margin: 0 26px;
-    border: 3px solid #0F0F0F;
+    border: 3px solid #ff0000;
     border-radius: 120px;
     width: 120px;
     height: 120px;
@@ -93,7 +93,7 @@ canvas {
 }
 
 .player .song {
-    color: #0f0f0f;
+    color: #ff0000;
     position: absolute;
     top: 225px;
     left: 0;
