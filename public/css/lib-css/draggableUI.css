@@ -110,6 +110,20 @@
             font-size: .9em;
             pointer-events: painted;
           }
+          .draggableStyle07 {
+            border-radius: 3px;
+              /* InitPos */
+              left: 1.5rem;
+              top: 29rem;
+              position: absolute;
+              width: 6em;
+              height: auto;
+            
+              float: right;
+              margin: 0px 0px 0px 0px;
+              font-size: .9em;
+              pointer-events: painted;
+            }
     .card {
       background-color: transparent;
       text-align: center;
@@ -119,6 +133,9 @@
       -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
       -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
       box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75); */
+    }
+    .draggableStyle03:active, .draggableStyle04:active, .draggableStyle05:active, .draggableStyle06:active, .draggableStyle07:active{
+      border: 1px solid rgba(255, 255, 255, 0.58);
     }
     .card-body {
       padding: 0rem;

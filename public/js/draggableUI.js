@@ -35,6 +35,12 @@ $(function () {
 		scroll: false,
 		grid: [20, 20],
 	});
+	//CoreCLI
+	$("#draggable-JS-07").draggable({
+		containment: ".pages-stack",
+		scroll: false,
+		grid: [20, 20],
+	});
 });
 
 $(document).ready(function () {
@@ -54,6 +60,11 @@ $(document).ready(function () {
 	});
 });
 $(document).ready(function () {
+	$("#draggable-JS-03").on("dblclick", function () {
+		$("#draggable-JS-00").show();
+	});
+});
+$(document).ready(function () {
 	$("#close00").on("click", function () {
 		$("#draggable-JS-00").hide();
 	});
@@ -61,6 +72,11 @@ $(document).ready(function () {
 /* Window -CoreCLI */
 $(document).ready(function () {
 	$("#button01").on("click", function () {
+		$("#draggable-JS-01").show();
+	});
+});
+$(document).ready(function () {
+	$("#draggable-JS-07").on("dblclick", function () {
 		$("#draggable-JS-01").show();
 	});
 });
