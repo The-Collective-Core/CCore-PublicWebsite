@@ -4,276 +4,165 @@
 * ScriptPath    : css/lib-css/draggableUI.css
 |*************************************************************************;
 */
-.draggable { 
-    width: 90px; 
-    height: 90px; 
-    padding: 0.5em; 
-    float: left;
-    margin: 0 10px 10px 0;
+#containment-wrapper {
+  width: 100%;
+  height: 100%;
 }
 
-#containment-wrapper { 
-    width:100%; 
-    height:100%; 
-  }
-
-/* Draggable Window Style */
-
-  .draggableStyle01 {
-  -webkit-box-shadow: var(--webkit-boxshadow);
-  -moz-box-shadow: var(--moz-boxshadow);
+/*
+|*************************************************************************;
+* Window Default Properties 
+|*************************************************************************;
+*/
+/* Default Box Size */
+.win-prop {
   box-shadow: var(--box-boxshadow);
-  border-radius: var(--border-radius-3);
-    /* InitPos */
-    left: 20rem;
-    top: 10rem;
-
-    position: absolute;
-    width: 200px;
-    height: 400px;
-  
-    float: right;
-    margin: 0px 0px 0px 0px;
-    font-size: .9em;
-    pointer-events: painted;
-  }
-  .draggableStyle02 {
-  -webkit-box-shadow: var(--webkit-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
-  box-shadow: var(--box-boxshadow);
+  -webkit-box-shadow: var(--webkit-boxshadow);
   border-radius: var(--border-radius-3);
-    /* InitPos */
-    left: 20rem;
-    top: 10rem;
-    position: absolute;
-    width: 200px;
-    height: 400px;
+  position: absolute;
+  /*StartBoxPos*/
+  left: 20rem;
+  top: 10rem;
+  /*BoxSize*/
+  width: 420px;
+  height: 400px;
+  font-size: 0.9em;
+  background-color: rgba(29, 31, 32, 0.75);
+}
+/* Win -AppHeader */
+.win-prop .header {
+  border-radius: var(--border-radius-3);
+  cursor: var(--main-cursor-grab);
+  font-family: var(--main-font);
+  display: flex;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #c21423;
+  background: rgb(15, 15, 15);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+/* Win -Close Button icon Init color */
+.close {
+  color: #c21423;
+}
+/* Win -Cursor = Grabbing on Active */
+.win-prop .header:active, .win-prop .header .sub-menu-title .icon:active {
+  cursor: var(--main-cursor-grabbing);
+}
+/* Win -AppHeader SubTitle */
+.win-prop .header .sub-menu-title {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0px 10px;
+  display: flex;
+}
+/* Win -AppHeader SubIcon */
+.win-prop .header .sub-menu-title .icon {
+  position: relative;
+  display: inline-block;
+}
+/* Win -AppHeader SubText */
+.win-prop .header .sub-menu-title .text {
+  height: 25px;
+  position: relative;
+  padding: 0px 8px;
+  line-height: 25px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* Win -AppHeader BTN */
+.win-prop .header .buttons {
+  display: flex;
+  width: 160px;
+  height: 30px;
+}
+.win-prop .header .buttons .btn {
+  flex: 1;
+  text-align: center;
+}
+/* Win -AppHeader BTN:Hover */
+.win-prop .header .buttons .btn:hover {
+  cursor: var(--main-cursor-pointer);
+  color: #c21423;
+}
+#close00:hover,
+#close01:hover,
+#close02:hover {
+  color: #000;
+}
+/* Win -AppHeader BTN:Proper */
+.win-prop .header .buttons .btn:hover.minus {
+  background: rgba(0, 0, 0, 0.25);
+}
+.win-prop .header .buttons .btn:hover.expand {
+  background: rgba(0, 0, 0, 0.25);
+}
+.win-prop .header .buttons .btn:hover.close {
+  background: #c21423;
+}
+/* Win -AppHeader BTN Icon */
+.win-prop .header .buttons .btn i {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+}
+
+/*
+|*************************************************************************;
+* Desktop Icons Default Properties 
+|*************************************************************************;
+*/
+/* Default Icon Settings */
+.desk-prop {
+  border-radius: var(--border-radius-3);
+  /* InitPos */
   
-    float: right;
-    margin: 0px 0px 0px 0px;
-    font-size: .9em;
-    pointer-events: painted;
-  }
-  .draggableStyle03 {
-    border-radius: var(--border-radius-3);
-      /* InitPos */
-      left: 1.5rem;
-      top: 2rem;
-      position: absolute;
-      width: 6em;
-      height: auto;
-    
-      float: right;
-      margin: 0px 0px 0px 0px;
-      font-size: .9em;
-      pointer-events: painted;
-    }
-    .draggableStyle04 {
-      border-radius: var(--border-radius-3);
-        /* InitPos */
-        left: 1.5rem;
-        top: 9rem;
-        position: absolute;
-        width: 6em;
-        height: auto;
-      
-        float: right;
-        margin: 0px 0px 0px 0px;
-        font-size: .9em;
-        pointer-events: painted;
-      }
-      .draggableStyle05 {
-        border-radius: var(--border-radius-3);
-          /* InitPos */
-          left: 1.5rem;
-          top: 16rem;
-          position: absolute;
-          width: 6em;
-          height: auto;
-        
-          float: right;
-          margin: 0px 0px 0px 0px;
-          font-size: .9em;
-          pointer-events: painted;
-        }
-        .draggableStyle06 {
-          border-radius: var(--border-radius-3);
-            /* InitPos */
-            left: 1.5rem;
-            top: 23rem;
-            position: absolute;
-            width: 6em;
-            height: auto;
-          
-            float: right;
-            margin: 0px 0px 0px 0px;
-            font-size: .9em;
-            pointer-events: painted;
-          }
-          .draggableStyle07 {
-            border-radius: var(--border-radius-3);
-              /* InitPos */
-              left: 1.5rem;
-              top: 29rem;
-              position: absolute;
-              width: 6em;
-              height: auto;
-            
-              float: right;
-              margin: 0px 0px 0px 0px;
-              font-size: .9em;
-              pointer-events: painted;
-            }
-    .card {
-      background-color: transparent;
-      text-align: center;
-      cursor: var(--main-cursor-pointer);
-      /* 
-      border: 1px solid rgba(0, 0, 0, 0.24);
-      border-radius: .25rem;
-      -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
-      box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75); */
-    }
-    .card:active{
-      cursor: var(--main-cursor-grabbing);
-    }
-    .draggableStyle03:active, .draggableStyle04:active, .draggableStyle05:active, .draggableStyle06:active, .draggableStyle07:active{
-      border: 1px solid rgba(255, 255, 255, 0.58);
-    }
+  position: absolute;
+  width: 6em;
+  height: auto;
 
-    .microsoft .header:active{
-      cursor: var(--main-cursor-grabbing);
-    }
-    
+  float: right;
+  margin: 0px 0px 0px 0px;
+  font-size: 0.9em;
+  pointer-events: painted;
+}
 
-    .card-body {
-      padding: 0rem;
-    }
-    .card-img, .card-img-top {
-      width: 4em;
-    }
+/* Default SubFolder Size - Container*/
+.sub-folder {
+  height: 92%;
+}
 
+/* Default Icon Positions - Desktop */
+.app-chip{left:1.5rem;top:9rem}
+.app-discord {left: 1.5rem;top: 2rem;}
+.app-branches{left: 1.5rem;top: 16rem;}
+.app-lodestar {left: 1.5rem;top: 23rem;}
+.app-centralmind {left: 1.5rem;top: 29rem;}
 
-  
-  .draggableStyle01 .modal-header .close {
-    padding: 0px;
-    color: #fff;
-    margin: 0rem 0rem 0rem auto;
-  }
-  
-  .draggableStyle02 .modal-header .close {
-    padding: 0px;
-    color: #fff;
-    margin: 0rem 0rem 0rem auto;
-    }
-  
-  .draggableStyle03 .modal-header .close {
-    padding: 0px;
-    color: #fff;
-    margin: 0rem 0rem 0rem auto;
-    }
-    
-  
+/* Default Icon Positions - SubFolders*/
+.app-bran-rd {}
+.app-bran-tact {}
 
-
-    /* Proper Style */
-    .window {
-      max-width: 600px;
-      min-width: 420px;
-  
-    }
-    
-    .microsoft {
-      font-family: 'Raleway', sans-serif;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    }
-    
-  .ui-widget-content {
-  
-    background-color: rgba(29, 31, 32, 0.75);
-  }
-    .microsoft .header {
-      
-      font-size: 1rem;
-      display: flex;
-      color: #C21423;
-      font-weight: 100;
-      background: rgb(15, 15, 15);
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-      cursor: var(--main-cursor-grab);
-      border-radius: var(--border-radius-3);
-      font-family: var(--main-font);
-    }
-    .close {
-      color: #C21423;
-    }
-    .microsoft .header .sub-menu-title {
-      flex: 1;
-      width: 100%;
-      height: 100%;
-      padding: 0px 10px;
-      display: flex;
-    }
-    .microsoft .header .sub-menu-title .icon {
-      position: relative;
-      display: inline-block;
-    }
-    .microsoft .header .sub-menu-title .text {
-      height: 25px;
-      position: relative;
-      padding: 0px 8px;
-      line-height: 25px;
-      border-left: 1px solid rgba(0, 0, 0, 0.2);
-    }
-    .microsoft .header .buttons {
-      display: flex;
-      width: 160px;
-      height: 30px;
-    }
-    .microsoft .header .buttons .btn {
-      flex: 1;
-      text-align: center;
-    }
-    .microsoft .header .buttons .btn:hover {
-      cursor: var(--main-cursor-pointer);
-      color: #C21423;
-    }
-    #close00:hover {
-      color: #000;
-    }
-    #close02:hover {
-      color: #000;
-    }
-    #close01:hover {
-      color: #000;
-    }
-    .microsoft .header .buttons .btn:hover.minus {
-      background: rgba(0, 0, 0, 0.25);
-    }
-    .microsoft .header .buttons .btn:hover.expand {
-      background: rgba(0, 0, 0, 0.25);
-    }
-    .microsoft .header .buttons .btn:hover.close {
-      background: #C21423;
-    }
-    .microsoft .header .buttons .btn i {
-      position: relative;
-      display: inline-block;
-      font-size: 20px;
-    }
-    /*
-    .microsoft .form {
-      background: rgba(255, 255, 255, 0.1);
-    }*/
-
-    .vector-main {
-      width: 100%;
-    }
-    #discord-widget > div > div.widgetHeader-2Hz_Ln {
-      background-color: #c21217;
-    }
-
-    .icon-img {
-      width: 1.5em;
-    }
+/* Icon Image Properties*/
+.card {
+  background-color: transparent;
+  text-align: center;
+  cursor: var(--main-cursor-pointer);
+}
+.icon-img {
+  width: 1.5em;
+}
+/* Icon Card on Grab*/
+.card:active {
+  cursor: var(--main-cursor-grabbing);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+}
+/* Icon Card Inner Properties*/
+.card-body {
+  padding: 0rem;
+}
+.card-img,
+.card-img-top {
+  width: 4em;
+}

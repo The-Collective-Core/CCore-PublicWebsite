@@ -374,6 +374,9 @@
 						case "corecli":
 							$("#draggable-JS-01").show();
 							break;
+						case "branches":
+							$("#draggable-JS-02").show();
+							break;
 					}
 					break;
 				//Handle app close commands
@@ -381,13 +384,14 @@
 					switch (cmd.arguments[0]) {
 						case "discord":
 							$("#draggable-JS-00").hide();
-
 							break;
 						case "corecli":
 							$("#draggable-JS-01").hide();
 							view.clearTerminal();
 							out = "Type 'help' for more information.";
 							break;
+						case "branches":
+							$("#draggable-JS-02").hide();
 							break;
 					}
 					break;
