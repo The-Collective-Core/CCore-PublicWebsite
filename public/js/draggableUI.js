@@ -1,20 +1,5 @@
 /* Menu Show/Hide */
 $(function () {
-	$("#draggable-JS-00").draggable({
-		snap: ".application",
-		containment: ".pages-stack",
-		scroll: false,
-	});
-	$("#draggable-JS-01").draggable({
-		snap: ".application",
-		containment: ".pages-stack",
-		scroll: false,
-	});
-	$("#draggable-JS-02").draggable({
-		snap: ".application",
-		containment: ".pages-stack",
-		scroll: false,
-	});
 	$("#draggable-JS-03").draggable({
 		containment: ".pages-stack",
 		scroll: false,
@@ -44,9 +29,7 @@ $(function () {
 });
 
 $(document).ready(function () {
-	$("#draggable-JS-00").hide();
 	$("#draggable-JS-01").show();
-	$("#draggable-JS-02").hide();
 	$("#draggable-JS-03").show();
 	$("#draggable-JS-04").show();
 	$("#draggable-JS-05").show();

@@ -351,9 +351,9 @@
 						"https://www.google.com/search?q=" + cmd.arguments.join(" ")
 					);
 					break;
-					/* CMD- Refresh Site */
+				/* CMD- Refresh Site */
 				case "refresh":
-					window.location = window.location.href+'?eraseCache=true';
+					window.location = window.location.href + "?eraseCache=true";
 					break;
 				/* CMD- Google Search */
 				case "goto":
@@ -367,29 +367,11 @@
 					break;
 				//Handle app open commands
 				case "open":
-					switch (cmd.arguments[0]) {
-						case "discord":
-							$("#draggable-JS-00").show();
-							break;
-						case "corecli":
-							$("#draggable-JS-01").show();
-							break;
-					}
+					appController.open(cmd.arguments[0]);
 					break;
 				//Handle app close commands
 				case "close":
-					switch (cmd.arguments[0]) {
-						case "discord":
-							$("#draggable-JS-00").hide();
-
-							break;
-						case "corecli":
-							$("#draggable-JS-01").hide();
-							view.clearTerminal();
-							out = "Type 'help' for more information.";
-							break;
-							break;
-					}
+					appController.close(cmd.arguments[0]);
 					break;
 				//App Memes
 				case "purge2":
