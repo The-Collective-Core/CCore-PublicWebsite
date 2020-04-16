@@ -25,10 +25,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <!--Assets- Console -->
   <link rel="stylesheet" type="text/css" href="./css/assets-win/console.css" />
-
   <!--Assets- Audio -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/assets-win/audio.css" />
@@ -50,12 +49,21 @@
 </head>
 
 <body>
+  <!-- Menu Right Click-->
+  <div class="dropdown-menu dropdown-menu-sm" id="context-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+  <!-- Body Wrapper-->
   <div class="body-sub">
+    <!-- Animation Loader-->
     <div id="loader-wrapper">
       <div id="loader">
         <iframe id="background" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" scrolling="no" src="img/loader.html"></iframe>
       </div>
     </div>
+    <!-- Navbar -->
     <nav class="navbar">
       <a class="navbar-brand" href="#">
         <img class="icon-main" src="../img/fav/favicon-16x16.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -73,10 +81,10 @@
         </div>
       </div>
     </nav>
-
+    <!-- Containment -->
     <div class="pages-stack">
     
-      <!-- page -->
+      <!-- Audio Player -->
       <div class="page" id="page-home">
         <div id="containment-wrapper">
           <div class="player">
@@ -94,7 +102,7 @@
           <div class="soundControl"></div>
           <div class="time">00:00</div>
         </div>
-         <!-- Desktop Drag -Icons -->
+      <!-- Desktop Drag -Icons -->
       <div id="draggable-JS-03" class="draggableStyle03 ">
         <div class="card">
           <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/icon-discord.svg" alt="Card image cap">
@@ -111,7 +119,7 @@
           </div>
         </div>
       </div>
-      <div id="draggable-JS-05" class="draggableStyle05 ">
+      <div id="draggable-JS-05" class="draggableStyle05">
         <div class="card">
           <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/icon-branches.svg" alt="Card image cap">
           <div class="card-body">
@@ -121,7 +129,7 @@
       </div>
       <div id="draggable-JS-06" class="draggableStyle06 ">
         <div class="card">
-          <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/Lodestar.png" alt="Card image cap">
+          <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/Lodestar.gif" alt="Card image cap">
           <div class="card-body">
             <p class="card-text">LODESTAR</p>
           </div>
@@ -136,11 +144,12 @@
         </div>
       </div>
       
-          <!-- Body Section-->
+          <!-- Windows Applications-->
+          <!-- App -Discord-->
           <div id="draggable-JS-00" class="window microsoft draggableStyle01 ui-widget-content application">
             <div class="header">
               <div class="sub-menu-title">
-                <div class="icon"><i class="material-icons">folder</i></div>
+                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/icon-discord.svg" alt="Card image cap"></div>
                 <div class="text">DISCORD -COLLECTIVE</div>
               </div>
               <div class="buttons">
@@ -153,12 +162,12 @@
               <iframe src="https://discordapp.com/widget?id=583599626280632320&theme=dark" width="418" height="350" allowtransparency="true" frameborder="0"></iframe>
             </div>
           </div>
-          
+          <!-- App -Console-->
           <div id="draggable-JS-01" class="window microsoft draggableStyle02 ui-widget-content application">
             <div class="header">
               <div class="sub-menu-title">
-                <div class="icon"><i class="material-icons">folder</i></div>
-                <div class="text">CORE-CLI</div>
+                <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/centralmind.png" alt="Card image cap"></div>
+                <div class="text">Central Mind</div>
               </div>
               <div class="buttons">
                 <div class="btn minus"> <i class="material-icons">remove</i></div>
@@ -166,16 +175,12 @@
                 <div id="close01" type="button" class="btn close"> <i class="material-icons">close</i></div>
               </div>
             </div>
-      
-
               <div id="terminal">
                 <div class="print"><strong>CoreCLI</strong> - Exploring WebCli Possibilities.<br>Type 'help' for more information.</div>
                 <div id="cli"><span class="label"></span><span class="prompt"></span></div>
                 </div>
-
-          
           </div>
-
+          <!-- App -Random-->
           <div id="draggable-JS-02" class="window microsoft draggableStyle02 ui-widget-content">
             <div class="header">
               <div class="sub-menu-title">
@@ -207,6 +212,7 @@
     <script>
       window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     </script>
+    <!-- Script Loader -->
     <script>
       $(document).ready(function() {
         setTimeout(function() {
@@ -214,6 +220,30 @@
           $('h1').css('color', '#222222');
         }, 3000);
       });
+    </script>
+    <!-- Script -RightClickMenu-->
+    <script>
+      $('body').on('contextmenu', function(e) {
+        var top = e.pageY - 0;
+        var left = e.pageX - 0;
+        $("#context-menu").css({
+          display: "block",
+          top: top,
+          left: left
+        }).addClass("show");
+        return false; //blocks default Webbrowser right click menu
+      }).on("click", function() {
+        $("#context-menu").removeClass("show").hide();
+      });
+
+      $("#context-menu").on("mousedown", function() {
+        $(this).parent().removeClass("show").hide();
+      });
+
+      $("#context-menu a").on("click", function() {
+        $(this).parent().removeClass("show").hide();
+      });
+
     </script>
   </div>
 </body>

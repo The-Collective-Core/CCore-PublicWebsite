@@ -331,14 +331,14 @@
 				/* CMD- Clear */
 				case "about-devs":
 					out =
-						'Made by Timothy Howard (<a href="https://codepen.io/timhow38">about.me</a>)<br>Copyright (c) 2018 Timothy Howard';
+						'Made by Timothy Howard (<a href="https://codepen.io/timhow38" target="_blank">about.me</a>)<br>Copyright (c) 2018 Timothy Howard';
 					break;
 				/* CMD- Help */
 				case "?":
 				case "h":
 				case "help":
 					out =
-						'<table id="tablePreview" class="table table-hover table-sm"> <thead> <tr> <th>Description</th> <th>Command Examples</th> </tr></thead> <tbody> <tr> <td>Find Commands</td><td>[help] - [?] - [h]</td></tr><tr> <td>Clear Terminal</td><td>[cls] - [clear]</td></tr><tr> <td>Open/Close App</td><td>[open/close app]</td></tr><tr> <td>Application List</td><td>[app-list]</td></tr><tr> <td>About DEVTeam</td><td>[about-devs]</td></tr><tr> <td>About Collective</td><td>[about-core]</td></tr><tr> <td>About Branches</td><td>[about-branches]</td></tr><tr> <td>Calculate</td><td>[calc 1+2]</td></tr><tr> <td>Google Search</td><td>[google/search Item]</td></tr></tbody> </table>';
+						'<table id="tablePreview" class="table table-hover table-sm"> <thead> <tr> <th>Description</th> <th>Command Examples</th> </tr></thead> <tbody> <tr> <td>Find Commands</td><td>[help] - [?] - [h]</td></tr> <tr> <td>Reload Site</td><td>[refresh]</td></tr><tr> <td>Clear Terminal</td><td>[cls] - [clear]</td></tr><tr> <td>Open/Close App</td><td>[open/close app]</td></tr><tr> <td>Application List</td><td>[app-list]</td></tr><tr> <td>About DEVTeam</td><td>[about-devs]</td></tr><tr> <td>About Collective</td><td>[about-core]</td></tr><tr> <td>About Branches</td><td>[about-branches]</td></tr><tr> <td>Calculate</td><td>[calc 1+2]</td></tr><tr> <td>Google Search</td><td>[google/search Item]</td></tr></tbody> </table>';
 					break;
 				/* CMD- Calc */
 				case "calc":
@@ -350,6 +350,10 @@
 					window.location.href = encodeURI(
 						"https://www.google.com/search?q=" + cmd.arguments.join(" ")
 					);
+					break;
+					/* CMD- Refresh Site */
+				case "refresh":
+					window.location = window.location.href+'?eraseCache=true';
 					break;
 				/* CMD- Google Search */
 				case "goto":

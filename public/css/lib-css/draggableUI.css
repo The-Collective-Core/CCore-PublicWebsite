@@ -20,10 +20,10 @@
 /* Draggable Window Style */
 
   .draggableStyle01 {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  border-radius: 3px;
+  -webkit-box-shadow: var(--webkit-boxshadow);
+  -moz-box-shadow: var(--moz-boxshadow);
+  box-shadow: var(--box-boxshadow);
+  border-radius: var(--border-radius-3);
     /* InitPos */
     left: 20rem;
     top: 10rem;
@@ -38,10 +38,10 @@
     pointer-events: painted;
   }
   .draggableStyle02 {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  border-radius: 3px;
+  -webkit-box-shadow: var(--webkit-boxshadow);
+  -moz-box-shadow: var(--moz-boxshadow);
+  box-shadow: var(--box-boxshadow);
+  border-radius: var(--border-radius-3);
     /* InitPos */
     left: 20rem;
     top: 10rem;
@@ -55,7 +55,7 @@
     pointer-events: painted;
   }
   .draggableStyle03 {
-    border-radius: 3px;
+    border-radius: var(--border-radius-3);
       /* InitPos */
       left: 1.5rem;
       top: 2rem;
@@ -69,7 +69,7 @@
       pointer-events: painted;
     }
     .draggableStyle04 {
-      border-radius: 3px;
+      border-radius: var(--border-radius-3);
         /* InitPos */
         left: 1.5rem;
         top: 9rem;
@@ -83,7 +83,7 @@
         pointer-events: painted;
       }
       .draggableStyle05 {
-        border-radius: 3px;
+        border-radius: var(--border-radius-3);
           /* InitPos */
           left: 1.5rem;
           top: 16rem;
@@ -97,7 +97,7 @@
           pointer-events: painted;
         }
         .draggableStyle06 {
-          border-radius: 3px;
+          border-radius: var(--border-radius-3);
             /* InitPos */
             left: 1.5rem;
             top: 23rem;
@@ -111,7 +111,7 @@
             pointer-events: painted;
           }
           .draggableStyle07 {
-            border-radius: 3px;
+            border-radius: var(--border-radius-3);
               /* InitPos */
               left: 1.5rem;
               top: 29rem;
@@ -127,6 +127,7 @@
     .card {
       background-color: transparent;
       text-align: center;
+      cursor: var(--main-cursor-pointer);
       /* 
       border: 1px solid rgba(0, 0, 0, 0.24);
       border-radius: .25rem;
@@ -134,16 +135,25 @@
       -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
       box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75); */
     }
+    .card:active{
+      cursor: var(--main-cursor-grabbing);
+    }
     .draggableStyle03:active, .draggableStyle04:active, .draggableStyle05:active, .draggableStyle06:active, .draggableStyle07:active{
       border: 1px solid rgba(255, 255, 255, 0.58);
     }
+
+    .microsoft .header:active{
+      cursor: var(--main-cursor-grabbing);
+    }
+    
+
     .card-body {
       padding: 0rem;
     }
     .card-img, .card-img-top {
       width: 4em;
     }
-  
+
 
   
   .draggableStyle01 .modal-header .close {
@@ -180,18 +190,20 @@
     }
     
   .ui-widget-content {
-    border: 1px solid rgb(15, 15, 15)!important;
+  
     background-color: rgba(29, 31, 32, 0.75);
   }
     .microsoft .header {
-      font-family: var(--main-font);
+      
       font-size: 1rem;
       display: flex;
       color: #C21423;
       font-weight: 100;
       background: rgb(15, 15, 15);
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-      cursor: grab;
+      cursor: var(--main-cursor-grab);
+      border-radius: var(--border-radius-3);
+      font-family: var(--main-font);
     }
     .close {
       color: #C21423;
@@ -204,7 +216,6 @@
       display: flex;
     }
     .microsoft .header .sub-menu-title .icon {
-      width: 30px;
       position: relative;
       display: inline-block;
     }
@@ -225,7 +236,7 @@
       text-align: center;
     }
     .microsoft .header .buttons .btn:hover {
-      cursor: pointer;
+      cursor: var(--main-cursor-pointer);
       color: #C21423;
     }
     #close00:hover {
@@ -244,7 +255,7 @@
       background: rgba(0, 0, 0, 0.25);
     }
     .microsoft .header .buttons .btn:hover.close {
-      background: rgba(150, 0, 0, 0.5);
+      background: #C21423;
     }
     .microsoft .header .buttons .btn i {
       position: relative;
@@ -261,4 +272,8 @@
     }
     #discord-widget > div > div.widgetHeader-2Hz_Ln {
       background-color: #c21217;
+    }
+
+    .icon-img {
+      width: 1.5em;
     }

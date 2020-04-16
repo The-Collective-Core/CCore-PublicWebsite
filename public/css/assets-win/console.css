@@ -15,6 +15,12 @@
     padding: 10px;
   text-align: left!important;
   line-height: normal;
+  border-left: 1px solid rgb(15, 15, 15)!important;
+    border-right: 1px solid rgb(15, 15, 15)!important;
+    border-bottom: 1px solid rgb(15, 15, 15)!important;
+  -webkit-box-shadow: inset 0px 9px 21px -9px rgba(179,0,0,1);
+-moz-box-shadow: inset 0px 9px 21px -9px rgba(179,0,0,1);
+box-shadow: inset 0px 9px 21px -9px rgba(179,0,0,1);
   }
   
   #terminal::-webkit-scrollbar {
@@ -47,9 +53,13 @@
     color: rgb(255, 0, 0);
   }
   
+  .print {
+    cursor: var(--main-cursor-default);
+  }
   #cli {
     position: relative;
     white-space: pre-wrap;
+    cursor: var(--main-cursor-text);
   }
   #cli span.cursor {
     background-color: rgb(238, 0, 0);

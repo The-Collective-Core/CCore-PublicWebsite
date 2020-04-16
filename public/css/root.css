@@ -25,17 +25,52 @@
   /* Base Properties */
   --main-zindex-0: 0;
   --main-zindex-1: 1;
+
+  /* Cursor Setting */
+  --main-cursor-default: default;
+  --main-cursor-grab: grab;
+  --main-cursor-grabbing: grabbing;
+  --main-cursor-pointer: pointer;
+  --main-cursor-text: text;
+
+
+/*
+|*************************************************************************;
+* Box Properties 
+|*************************************************************************;
+*/
+  /* Default Box Shadow */
+  --webkit-boxshadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  --moz-boxshadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  --box-boxshadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+  /* Border Properties */
+  --border-radius-none:0rem;
+  --border-radius-3:3px;
 }
 
+/*
+|*************************************************************************;
+* Page Properties 
+|*************************************************************************;
+*/
 
-
-
-
-/* Global Scroll */ 
-::-webkit-scrollbar {
-	width: 0px;  /* remove scrollbar space */
-	background: transparent;  /* optional: just make scrollbar invisible */
+  /* Remove Body Scroll */
+  ::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
   }
-@-moz-document url-prefix() {
-	html,body{overflow: hidden !important;}
+  @-moz-document url-prefix() {
+    html,body{overflow: hidden !important;}
+  }
+
+  /* Remove Body Text Highlight */
+  ::selection {
+    color: none;
+    background: none;
+  }
+  /* For Mozilla Firefox */
+  ::-moz-selection {
+    color: none;
+    background: none;
   }
