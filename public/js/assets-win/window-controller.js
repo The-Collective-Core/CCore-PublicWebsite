@@ -10,6 +10,7 @@ class Application {
 class AppController {
 	constructor() {
 		this.apps = [];
+		this.icons = [];
 		this.iconSpawnX = 10;
 		this.iconSpawnY = 10;
 	}
@@ -62,12 +63,28 @@ class AppController {
 		cardBody.appendChild(cardText);
 		cardContainer.appendChild(cardBody);
 		document.getElementById("desktop-icons").appendChild(container);
-		container.style.left = this.iconSpawnX + "px";
-		container.style.top = this.iconSpawnY + "px";
+		//Figure out positioning
+		var savedPos = localStorage.getItem("iconPos");
+		if (!savedPos) {
+			savedPos = "{}";
+			localStorage.setItem("iconPos", savedPos);
+		}
+		savedPos = JSON.parse(savedPos);
+		if (savedPos[iconOpts.name]) {
+			container.style.left = savedPos[iconOpts.name].left;
+			container.style.top = savedPos[iconOpts.name].top;
+		} else {
+			container.style.left = this.iconSpawnX + "px";
+			container.style.top = this.iconSpawnY + "px";
+			this.iconSpawnY += 100;
+		}
+		this.icons.push({
+			id: container.id,
+			name: iconOpts.name,
+		});
 		container.ondblclick = () => {
 			self.open(app.name);
 		};
-		this.iconSpawnY += 100;
 		$("#app-icon-" + app.name).draggable({
 			containment: ".pages-stack",
 			scroll: false,
@@ -90,9 +107,16 @@ class AppController {
 		$("#" + app.id).hide();
 		app.onClose();
 	}
-	init() {
-		this.apps.forEach((app) => {});
-		this.open("corecli");
+	saveIcons() {
+		var toSave = {};
+		this.icons.forEach((icon) => {
+			var elm = document.getElementById(icon.id);
+			toSave[icon.name] = {
+				left: elm.style.left,
+				top: elm.style.top,
+			};
+		});
+		localStorage.setItem("iconPos", JSON.stringify(toSave));
 	}
 }
 var appController = new AppController();
@@ -100,7 +124,7 @@ var appController = new AppController();
 $(document).ready(initAppController);
 
 function initAppController() {
-	// appController.init();
+	//Discord application
 	appController.add(
 		"draggable-JS-00",
 		"discord",
@@ -113,6 +137,7 @@ function initAppController() {
 			name: "DISCORD",
 		}
 	);
+	//Command line app
 	appController.add(
 		"draggable-JS-01",
 		"corecli",
@@ -128,6 +153,7 @@ function initAppController() {
 			name: "Cental Mind",
 		}
 	);
+	//Branch folder
 	appController.add(
 		"draggable-JS-02",
 		"unnamed",
@@ -140,6 +166,7 @@ function initAppController() {
 			name: "BRANCHES",
 		}
 	);
+	//Loadstar icon
 	appController.add(
 		"draggable-JS-blankApp",
 		"empty",
@@ -152,6 +179,7 @@ function initAppController() {
 			name: "LODESTAR",
 		}
 	);
+	//Chip icon
 	appController.add(
 		"draggable-JS-blankApp",
 		"empty",
@@ -166,3 +194,9 @@ function initAppController() {
 	);
 	appController.open("corecli");
 }
+
+function saveIcons() {
+	appController.saveIcons();
+}
+
+setInterval(saveIcons, 1000);
