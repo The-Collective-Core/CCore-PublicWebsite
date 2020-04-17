@@ -194,18 +194,6 @@ function initAppController() {
 			name: "LODESTAR",
 		}
 	);
-	appController.add(
-		"draggable-JS-blankApp",
-		"chip",
-		{
-			onOpen: () => {},
-			onClose: () => {},
-		},
-		{
-			path: "/img/images/vector-img/desktop/branches/RenderRD.png",
-			name: "Chip",
-		}
-	);
 
 	appController.open("corecli");
 }

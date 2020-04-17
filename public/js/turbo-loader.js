@@ -11,8 +11,6 @@ var asclog_main=asclog.children[0].children[0];
 
 const hexstr="0xABCDEF123456789uX";
 
-var phrases=["integrating rouge AI;","scaning subroutine;","SYSTEM CHECK;","Cleaning Sensors;","Trouble shooting;","Allocating Memory;","CONNECTING...;","Mounting Subroutine;","observing\\\\\\\\\\;"]
-
 /** how many lines will be present in the left console, logo has 24 lines */
 const line_limit=24;
 

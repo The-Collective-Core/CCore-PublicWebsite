@@ -38,7 +38,6 @@ body {
 	font-family: var(--main-font);
 	margin: 0;
 	color: #cecece;
-	
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	
@@ -145,7 +144,7 @@ a:hover {
 
 #loader {
 	z-index: var(--main-zindex-0);
-    background-color: var(--main-color-3);
+	background-color: var(--main-color-3);
     display: block;
     position: relative;
     left: 0%;
@@ -154,7 +153,6 @@ a:hover {
     height: 100%;
     border: 3px solid transparent;
 }
-
 #loader-wrapper .loader-section {
     z-index: var(--main-zindex-1);
     position: fixed;
