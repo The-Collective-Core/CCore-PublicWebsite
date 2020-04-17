@@ -196,22 +196,23 @@ function initAppController() {
 		iconName: "LODESTAR",
 		iconParent: "desktop-icons",
 	});
-	appController.add({
-		id: "draggable-JS-blankApp",
-		name: "chip",
-		onOpen: () => {},
-		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/branches/RenderRD.png",
-		iconName: "Chip",
-		iconParent: "desktop-icons",
-	});
+	//
+	//appController.add({
+	//	id: "draggable-JS-blankApp",
+	//	name: "chip",
+	//	onOpen: () => {},
+	//	onClose: () => {},
+	//	iconPath: "/img/images/vector-img/desktop/chip.gif",
+	//	iconName: "CHIP",
+	//	iconParent: "desktop-icons",
+	//});
 	appController.add({
 		id: "draggable-JS-blankApp",
 		name: "science0",
 		onOpen: () => {},
 		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/navBranchRD.svg",
-		iconName: "Science0",
+		iconPath: "/img/images/vector-img/desktop/branches/LG.png",
+		iconName: "LOGISTICS",
 		iconParent: "sub-folder-0",
 	});
 	appController.add({
@@ -219,8 +220,8 @@ function initAppController() {
 		name: "science1",
 		onOpen: () => {},
 		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/navBranchTact.svg",
-		iconName: "Science1",
+		iconPath: "/img/images/vector-img/desktop/branches/RD.png",
+		iconName: "SCIENCE",
 		iconParent: "sub-folder-0",
 	});
 
