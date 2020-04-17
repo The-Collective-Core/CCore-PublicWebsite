@@ -49,11 +49,16 @@
 </head>
 
 <body>
+  <div id="layers">
+    <div id="layer-stars"></div>
+    <div id="layers-inner"></div>  
+    <div id="layers-outer"></div>
+</div>
   <!-- Menu Right Click-->
   <div class="dropdown-menu dropdown-menu-sm" id="context-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a class="dropdown-item" >About Developers</a>
+    <a class="dropdown-item" >Refresh Page</a>
+    <a class="dropdown-item" >Properties</a>
   </div>
   <!-- Body Wrapper-->
   <div class="body-sub">
@@ -73,12 +78,7 @@
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           APPS
         </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <button id="button01" class="dropdown-item" type="button">CORE-CLI</button>
-          <button id="button00" class="dropdown-item" type="button">DISCORD</button>
-          <div class="dropdown-divider"></div>
-          <button id="button00" class="dropdown-item" type="button">BLANK</button>
-        </div>
+        <div class="dropdown-menu dropdown-menu-right" id="dropDownMenu"></div>
       </div>
     </nav>
     <!-- Containment -->
@@ -99,54 +99,31 @@
             <div class="pause"></div>
             <div class="nextSong"></div>
           </div>
-          <div class="soundControl"></div>
+			 <!-- <div class="soundControl"></div> -->
+			<input type="range" min="0" max="100" value="25" class="soundControl" id="volumeSelector">
           <div class="time">00:00</div>
         </div>
-      <!-- Desktop Drag -Icons -->
-      <div id="draggable-JS-03" class="app-discord desk-prop">
-        <div class="card">
-          <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/icon-discord.svg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">DISCORD</p>
-          </div>
-        </div>
-      </div>
-      <div id="draggable-JS-04" class="app-chip desk-prop">
-        <div class="card">
-          <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/chip.gif" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">CHIP.exe</p>
-          </div>
-        </div>
-      </div>
-      <div id="draggable-JS-05" class="app-branches desk-prop">
-        <div class="card">
-          <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/icon-branches.svg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">BRANCHES</p>
-          </div>
-        </div>
-      </div>
-      <div id="draggable-JS-06" class="app-lodestar desk-prop">
-        <div class="card">
-          <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/Lodestar.gif" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">LODESTAR</p>
-          </div>
-        </div>
-      </div>
-      <div id="draggable-JS-07" class="app-centralmind desk-prop">
-        <div class="card">
-          <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/centralmind.png" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Cental Mind</p>
-          </div>
-        </div>
-      </div>
-      
-          <!-- Windows Applications-->
+		<!-- Desktop Drag -Icons -->
+		<div id="desktop-icons"></div>
+			 <!-- Windows Applications-->
+			 <!-- App -Blank-->
+			<div id="draggable-JS-blankApp" class="win-prop application-non-drag">
+				<div class="header">
+					<div class="sub-menu-title">
+						<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/icon-discord.svg"
+								alt="Card image cap"></div>
+						<div class="text">EMPTY WINDOW</div>
+					</div>
+					<div class="buttons">
+						<div class="btn minus"> <i class="material-icons">remove</i></div>
+						<div class="btn expand"> <i class="material-icons">crop_square</i></div>
+						<div id="close" type="button" class="btn close"> <i class="material-icons">close</i></div>
+					</div>
+				</div>
+				<div class="form"></div>
+			</div>
           <!-- App -Discord-->
-          <div id="draggable-JS-00" class="win-prop application">
+          <div id="draggable-JS-00" class="win-prop application-non-drag">
             <div class="header">
               <div class="sub-menu-title">
                 <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/icon-discord.svg" alt="Card image cap"></div>
@@ -163,7 +140,7 @@
             </div>
           </div>
           <!-- App -Console-->
-          <div id="draggable-JS-01" class="win-prop application">
+          <div id="draggable-JS-01" class="win-prop application-non-drag">
             <div class="header">
               <div class="sub-menu-title">
                 <div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/centralmind.png" alt="Card image cap"></div>
@@ -177,11 +154,11 @@
             </div>
               <div id="terminal">
                 <div class="print"><strong>CoreCLI</strong> - Exploring WebCli Possibilities.<br>Type 'help' for more information.</div>
-                <div id="cli"><span class="label"></span><span class="prompt"></span></div>
+                <div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span></div>
                 </div>
           </div>
           <!-- App -Random-->
-          <div id="draggable-JS-02" class="win-prop application">
+          <div id="draggable-JS-02" class="win-prop application-non-drag">
             <div class="header">
               <div class="sub-menu-title">
                 <div class="icon"><i class="material-icons">folder</i></div>
@@ -197,7 +174,7 @@
               <!-- Sub-Icon - RD-->
               <div id="draggable-JS-08" class="app-bran-rd desk-prop">
                 <div class="card">
-                  <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/navBranchRD.svg" alt="Card image cap">
+                  <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/branches/RD.png" alt="Card image cap">
                   <div class="card-body">
                     <p class="card-text">Science</p>
                   </div>
@@ -206,7 +183,7 @@
               <!-- Sub-Icon - RD-->
               <div id="draggable-JS-09" class="app-bran-tact  desk-prop">
                 <div class="card">
-                  <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/navBranchTact.svg" alt="Card image cap">
+                  <img id="purge" class="card-img-top mx-auto d-block" src="/img/images/vector-img/desktop/branches/LG.png" alt="Card image cap">
                   <div class="card-body">
                     <p class="card-text">Science</p>
                   </div>

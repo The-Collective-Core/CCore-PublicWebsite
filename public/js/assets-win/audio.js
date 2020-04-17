@@ -11,6 +11,8 @@ var Framer = {
 
 	loadingAngle: 0,
 
+	audioMultLvl: 1,
+
 	init: function (scene) {
 		this.canvas = document.querySelector("canvas");
 		this.scene = scene;
@@ -48,7 +50,7 @@ var Framer = {
 		var dy2 = parseInt(this.scene.cy + y2);
 
 		var gradient = this.context.createLinearGradient(dx1, dy1, dx2, dy2);
-		gradient.addColorStop(0, "#0F0F0F");
+		gradient.addColorStop(0, "rgba(0, 0, 0, 0.31)");
 		gradient.addColorStop(0.6, "#660000");
 		gradient.addColorStop(1, "#FF0000");
 		this.context.beginPath();
@@ -106,7 +108,7 @@ var Framer = {
 		for (var i = 0, len = ticks.length; i < len; ++i) {
 			var coef = 1 - i / (len * 2.5);
 			var delta =
-				((this.frequencyData[i] || 0) - lesser * coef) *
+				((this.frequencyData[i] * this.audioMultLvl || 0) - lesser * coef) *
 				this.scene.scaleCoef;
 			if (delta < 0) {
 				delta = 0;
@@ -438,7 +440,7 @@ var Controls = {
 	initHandlers: function () {
 		this.initPlayButton();
 		this.initPauseButton();
-		this.initSoundButton();
+		this.initAudioSlider();
 		this.initPrevSongButton();
 		this.initNextSongButton();
 		this.initTimeHandler();
@@ -466,18 +468,14 @@ var Controls = {
 		});
 	},
 
-	initSoundButton: function () {
-		var that = this;
-		this.soundButton = document.querySelector(".soundControl");
-		this.soundButton.addEventListener("mouseup", function () {
-			if (that.soundButton.classList.contains("disable")) {
-				that.soundButton.classList.remove("disable");
-				Player.unmute();
-			} else {
-				that.soundButton.classList.add("disable");
-				Player.mute();
-			}
-		});
+	initAudioSlider: function () {
+		const slider = document.getElementById("volumeSelector");
+		Player.gainNode.gain.value = slider.value / 100;
+		Framer.audioMultLvl = (1 - slider.value / 100) / 2.5 + 1;
+		slider.oninput = function () {
+			Player.gainNode.gain.value = this.value / 100;
+			Framer.audioMultLvl = (1 - slider.value / 100) / 2.5 + 1;
+		};
 	},
 
 	initPrevSongButton: function () {
