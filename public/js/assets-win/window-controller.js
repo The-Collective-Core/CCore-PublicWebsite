@@ -5,6 +5,7 @@ class Application {
 		this.onOpen = events.onOpen;
 		this.onClose = events.onClose;
 		this.iconOpts = iconOpts;
+		this.elm = document.getElementById(id);
 	}
 }
 class AppController {
@@ -18,6 +19,13 @@ class AppController {
 		const app = new Application(id, name, events, iconOpts);
 		const dropDown = $("#dropDownMenu");
 		const self = this;
+		//Setup bring to front on click
+		app.elm.onmousedown = () => {
+			self.apps.forEach((otherApp) => {
+				otherApp.elm.style.zIndex = 1;
+			});
+			app.elm.style.zIndex = 2;
+		};
 		//Make app dragable
 		$("#" + app.id).draggable({
 			snap: ".application",
@@ -25,9 +33,7 @@ class AppController {
 			scroll: false,
 		});
 		//Make app closable
-		const closeButton = document
-			.getElementById(id)
-			.getElementsByClassName("btn close")[0];
+		const closeButton = app.elm.getElementsByClassName("btn close")[0];
 		closeButton.onclick = () => {
 			self.close(app.name);
 		};
