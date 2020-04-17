@@ -13,10 +13,3 @@ $(function () {
 		grid: [20, 20],
 	});
 });
-
-/* Error Messages */
-$(document).ready(function () {
-	$("#success").hide();
-	$("#warning").hide();
-	$("#danger").hide();
-});

@@ -50,7 +50,7 @@ var Framer = {
 		var dy2 = parseInt(this.scene.cy + y2);
 
 		var gradient = this.context.createLinearGradient(dx1, dy1, dx2, dy2);
-		gradient.addColorStop(0, "#0F0F0F");
+		gradient.addColorStop(0, "rgba(0, 0, 0, 0.31)");
 		gradient.addColorStop(0.6, "#660000");
 		gradient.addColorStop(1, "#FF0000");
 		this.context.beginPath();

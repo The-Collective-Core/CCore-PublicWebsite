@@ -26,7 +26,7 @@ class AppController {
 			});
 			app.elm.style.zIndex = 2;
 		};
-		//Make app dragable
+		//Make app draggable
 		$("#" + app.id).draggable({
 			snap: ".application",
 			containment: ".pages-stack",
@@ -37,6 +37,7 @@ class AppController {
 		closeButton.onclick = () => {
 			self.close(app.name);
 		};
+
 		//Create top right drop down element
 		var btn = document.createElement("button");
 		btn.id = "app-button-" + app.name;
@@ -46,6 +47,7 @@ class AppController {
 		btn.onclick = () => {
 			self.open(app.name);
 		};
+
 		dropDown.append(btn);
 		//Create desktop icon
 		const container = document.createElement("div");
@@ -69,6 +71,7 @@ class AppController {
 		cardBody.appendChild(cardText);
 		cardContainer.appendChild(cardBody);
 		document.getElementById("desktop-icons").appendChild(container);
+		
 		//Figure out positioning
 		var savedPos = localStorage.getItem("iconPos");
 		if (!savedPos) {
@@ -181,7 +184,7 @@ function initAppController() {
 	//Loadstar icon
 	appController.add(
 		"draggable-JS-blankApp",
-		"empty",
+		"lodestar",
 		{
 			onOpen: () => {},
 			onClose: () => {},
@@ -191,19 +194,19 @@ function initAppController() {
 			name: "LODESTAR",
 		}
 	);
-	//Chip icon
 	appController.add(
 		"draggable-JS-blankApp",
-		"empty",
+		"chip",
 		{
 			onOpen: () => {},
 			onClose: () => {},
 		},
 		{
-			path: "/img/images/vector-img/desktop/chip.gif",
-			name: "CHIP.exe",
+			path: "/img/images/vector-img/desktop/branches/RenderRD.png",
+			name: "Chip",
 		}
 	);
+
 	appController.open("corecli");
 }
 
