@@ -187,7 +187,7 @@ function initAppController() {
 	});
 	//Loadstar icon
 	appController.add({
-		id: "draggable-JS-blankApp",
+		id: "draggable-JS-lodestar",
 		name: "lodestar",
 
 		onOpen: () => {},
@@ -206,22 +206,48 @@ function initAppController() {
 	//	iconName: "CHIP",
 	//	iconParent: "desktop-icons",
 	//});
+
+	// ******************************************************************* //
+	// Branch Folder Icons
+	// ******************************************************************* //
+	//Branch = Logistics
 	appController.add({
 		id: "draggable-JS-blankApp",
-		name: "science0",
+		name: "logistics",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/LG.png",
 		iconName: "LOGISTICS",
 		iconParent: "sub-folder-0",
 	});
+	//Branch = Science
 	appController.add({
 		id: "draggable-JS-blankApp",
-		name: "science1",
+		name: "science",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/RD.png",
 		iconName: "SCIENCE",
+		iconParent: "sub-folder-0",
+	});
+	//Branch = Tactical
+	appController.add({
+		id: "draggable-JS-blankApp",
+		name: "tactical",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/branches/TC.png",
+		iconName: "TACTICAL",
+		iconParent: "sub-folder-0",
+	});
+	//Branch = Diplomacy
+	appController.add({
+		id: "draggable-JS-blankApp",
+		name: "diplomacy",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/branches/DP.png",
+		iconName: "DIPLOMACY",
 		iconParent: "sub-folder-0",
 	});
 

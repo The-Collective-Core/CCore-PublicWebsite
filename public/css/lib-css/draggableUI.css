@@ -129,7 +129,7 @@
 }
 
 /* Default SubFolder Size - Container*/
-.sub-folder {
+.sub-folder { 
   height: 92%;
 }
 
@@ -165,4 +165,17 @@
 .card-img,
 .card-img-top {
   width: 4em;
+}
+
+
+
+
+
+/* Application Lodestar */
+.lode-card {
+ 
+}
+.card-text {
+  padding-left: 1em;
+  padding-right: 1em;
 }
