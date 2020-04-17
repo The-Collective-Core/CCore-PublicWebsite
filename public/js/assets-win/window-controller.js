@@ -105,11 +105,17 @@ class AppController {
 			console.log("Unknown app %s", appName);
 			return;
 		}
+		$("#" + app.id)
+			.removeClass("application-non-drag")
+			.addClass("application");
 		$("#" + app.id).show();
 		app.onOpen();
 	}
 	close(appName) {
 		const app = this.apps.find((ap) => ap.name == appName);
+		$("#" + app.id)
+			.removeClass("application")
+			.addClass("application-non-drag");
 		$("#" + app.id).hide();
 		app.onClose();
 	}
