@@ -1,11 +1,14 @@
 class Application {
-	constructor(id, name, events, iconOpts) {
-		this.id = id;
-		this.name = name;
-		this.onOpen = events.onOpen;
-		this.onClose = events.onClose;
-		this.iconOpts = iconOpts;
-		this.elm = document.getElementById(id);
+	constructor(opts) {
+		this.id = opts.id;
+		this.name = opts.name;
+		this.onOpen = opts.onOpen;
+		this.onClose = opts.onClose;
+		this.iconOpts = {
+			name: opts.iconName,
+			path: opts.iconPath,
+		};
+		this.elm = document.getElementById(this.id);
 	}
 }
 class AppController {
@@ -15,8 +18,14 @@ class AppController {
 		this.iconSpawnX = 10;
 		this.iconSpawnY = 10;
 	}
-	add(id, name, events, iconOpts) {
-		const app = new Application(id, name, events, iconOpts);
+	add(opts) {
+		const id = opts.id;
+		const name = opts.name;
+		const iconOpts = {
+			name: opts.iconName,
+			path: opts.iconPath,
+		};
+		const app = new Application(opts);
 		const dropDown = $("#dropDownMenu");
 		const self = this;
 		//Setup bring to front on click
@@ -70,8 +79,12 @@ class AppController {
 		cardText.innerText = iconOpts.name;
 		cardBody.appendChild(cardText);
 		cardContainer.appendChild(cardBody);
-		document.getElementById("desktop-icons").appendChild(container);
-		
+		const parentElm = document.getElementById(opts.iconParent);
+		if (!parentElm) {
+			debugger;
+		}
+		parentElm.appendChild(container);
+
 		//Figure out positioning
 		var savedPos = localStorage.getItem("iconPos");
 		if (!savedPos) {
@@ -140,72 +153,76 @@ $(document).ready(initAppController);
 
 function initAppController() {
 	//Discord application
-	appController.add(
-		"draggable-JS-00",
-		"discord",
-		{
-			onOpen: () => {},
-			onClose: () => {},
-		},
-		{
-			path: "/img/images/vector-img/desktop/icon-discord.svg",
-			name: "DISCORD",
-		}
-	);
+	appController.add({
+		id: "draggable-JS-00",
+		name: "discord",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/icon-discord.svg",
+		iconName: "DISCORD",
+		iconParent: "desktop-icons",
+	});
 	//Command line app
-	appController.add(
-		"draggable-JS-01",
-		"corecli",
-		{
-			onOpen: () => {},
-			onClose: () => {
-				// view.clearTerminal();
-				out = "Type 'help' for more information.";
-			},
+	appController.add({
+		id: "draggable-JS-01",
+		name: "corecli",
+		onOpen: () => {},
+		onClose: () => {
+			// view.clearTerminal();
+			out = "Type 'help' for more information.";
 		},
-		{
-			path: "/img/images/vector-img/desktop/centralmind.png",
-			name: "Cental Mind",
-		}
-	);
+		iconPath: "/img/images/vector-img/desktop/centralmind.png",
+		iconName: "Cental Mind",
+		iconParent: "desktop-icons",
+	});
 	//Branch folder
-	appController.add(
-		"draggable-JS-02",
-		"unnamed",
-		{
-			onOpen: () => {},
-			onClose: () => {},
-		},
-		{
-			path: "/img/images/vector-img/desktop/icon-branches.svg",
-			name: "BRANCHES",
-		}
-	);
+	appController.add({
+		id: "draggable-JS-02",
+		name: "unnamed",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/icon-branches.svg",
+		iconName: "BRANCHES",
+		iconParent: "desktop-icons",
+	});
 	//Loadstar icon
-	appController.add(
-		"draggable-JS-blankApp",
-		"lodestar",
-		{
-			onOpen: () => {},
-			onClose: () => {},
-		},
-		{
-			path: "/img/images/vector-img/desktop/Lodestar.gif",
-			name: "LODESTAR",
-		}
-	);
-	appController.add(
-		"draggable-JS-blankApp",
-		"chip",
-		{
-			onOpen: () => {},
-			onClose: () => {},
-		},
-		{
-			path: "/img/images/vector-img/desktop/branches/RenderRD.png",
-			name: "Chip",
-		}
-	);
+	appController.add({
+		id: "draggable-JS-blankApp",
+		name: "lodestar",
+
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/Lodestar.gif",
+		iconName: "LODESTAR",
+		iconParent: "desktop-icons",
+	});
+	appController.add({
+		id: "draggable-JS-blankApp",
+		name: "chip",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/branches/RenderRD.png",
+		iconName: "Chip",
+		iconParent: "desktop-icons",
+	});
+	appController.add({
+		id: "draggable-JS-blankApp",
+		name: "science0",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/navBranchRD.svg",
+		iconName: "Science0",
+		iconParent: "sub-folder-0",
+	});
+	appController.add({
+		id: "draggable-JS-blankApp",
+		name: "science1",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/navBranchTact.svg",
+		iconName: "Science1",
+		iconParent: "sub-folder-0",
+	});
 
 	appController.open("corecli");
 }
