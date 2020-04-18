@@ -108,7 +108,7 @@ class AppController {
 			self.open(app.name);
 		};
 		$("#app-icon-" + app.name).draggable({
-			containment: ".pages-stack",
+			containment: "#" + opts.iconParent,
 			scroll: false,
 			grid: [20, 20],
 		});
