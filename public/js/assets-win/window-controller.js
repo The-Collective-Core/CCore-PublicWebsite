@@ -4,6 +4,7 @@ class Application {
 		this.name = opts.name;
 		this.onOpen = opts.onOpen;
 		this.onClose = opts.onClose;
+		this.appDesc = opts.appDesc;
 		this.iconOpts = {
 			name: opts.iconName,
 			path: opts.iconPath,
@@ -158,8 +159,12 @@ class AppController {
 	getAppDesc(appName) {
 		const app = this.apps.find((ap) => ap.name == appName);
 		if (!app) {
-			return "Unknown application";
+			return 'Unknown application "' + appName + '"';
 		}
+		return app.appDesc;
+	}
+	listApps() {
+		return this.apps.map((app) => app.name).join("\n");
 	}
 }
 var appController = new AppController();
