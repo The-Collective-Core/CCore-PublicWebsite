@@ -187,7 +187,7 @@ function initAppController() {
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/icon-discord.svg",
 		iconName: "DISCORD",
-		iconParent: "desktop-icons",
+		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc: "A cool app description",
 	});
@@ -202,7 +202,7 @@ function initAppController() {
 		},
 		iconPath: "/img/images/vector-img/desktop/centralmind.png",
 		iconName: "Cental Mind",
-		iconParent: "desktop-icons",
+		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc: "An EVEN cooler app description!!!",
 	});
@@ -214,7 +214,7 @@ function initAppController() {
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/icon-branches.svg",
 		iconName: "BRANCHES",
-		iconParent: "desktop-icons",
+		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc: "A cool app description",
 	});
@@ -226,7 +226,7 @@ function initAppController() {
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/Lodestar.gif",
 		iconName: "LODESTAR",
-		iconParent: "desktop-icons",
+		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc: "A cool app description",
 	});
@@ -264,6 +264,7 @@ function initAppController() {
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/RD.png",
 		iconName: "SCIENCE",
+		iconXDelta: 75,
 		iconParent: "sub-folder-0",
 	});
 	//Branch = Tactical
