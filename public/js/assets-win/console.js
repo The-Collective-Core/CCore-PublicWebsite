@@ -389,6 +389,9 @@ const purge2 =
 					out =
 						'<img style="width:2em;margin-left: -9px;transform: rotate(90deg);" src="../../img/images/commands/purge.png"></img>';
 					break;
+				case "app-desc":
+					out = appController.getAppDesc(arguments[0]);
+					break;
 			}
 			return out;
 		},

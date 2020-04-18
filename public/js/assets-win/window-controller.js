@@ -15,12 +15,9 @@ class AppController {
 	constructor() {
 		this.apps = [];
 		this.icons = [];
-		this.iconSpawnX = 10;
-		this.iconSpawnY = 10;
+		this.iconSpawn = {};
 	}
 	add(opts) {
-		const id = opts.id;
-		const name = opts.name;
 		const iconOpts = {
 			name: opts.iconName,
 			path: opts.iconPath,
@@ -96,9 +93,17 @@ class AppController {
 			container.style.left = savedPos[iconOpts.name].left;
 			container.style.top = savedPos[iconOpts.name].top;
 		} else {
-			container.style.left = this.iconSpawnX + "px";
-			container.style.top = this.iconSpawnY + "px";
-			this.iconSpawnY += 100;
+			if (!this.iconSpawn[opts.iconParent]) {
+				this.iconSpawn[opts.iconParent] = {
+					x: 20,
+					y: 35,
+				};
+			}
+			const currentPos = this.iconSpawn[opts.iconParent];
+			container.style.left = currentPos.x + "px";
+			container.style.top = currentPos.y + "px";
+			currentPos.x += opts.iconXDelta || 0;
+			currentPos.y += opts.iconYDelta || 0;
 		}
 		this.icons.push({
 			id: container.id,
@@ -129,6 +134,10 @@ class AppController {
 	}
 	close(appName) {
 		const app = this.apps.find((ap) => ap.name == appName);
+		if (!app) {
+			console.log("Unknown app %s", appName);
+			return;
+		}
 		$("#" + app.id)
 			.removeClass("application")
 			.addClass("application-non-drag");
@@ -146,6 +155,12 @@ class AppController {
 		});
 		localStorage.setItem("iconPos", JSON.stringify(toSave));
 	}
+	getAppDesc(appName) {
+		const app = this.apps.find((ap) => ap.name == appName);
+		if (!app) {
+			return "Unknown application";
+		}
+	}
 }
 var appController = new AppController();
 
@@ -161,6 +176,8 @@ function initAppController() {
 		iconPath: "/img/images/vector-img/desktop/icon-discord.svg",
 		iconName: "DISCORD",
 		iconParent: "desktop-icons",
+		iconYDelta: 100,
+		appDesc: "A cool app description",
 	});
 	//Command line app
 	appController.add({
@@ -174,27 +191,32 @@ function initAppController() {
 		iconPath: "/img/images/vector-img/desktop/centralmind.png",
 		iconName: "Cental Mind",
 		iconParent: "desktop-icons",
+		iconYDelta: 100,
+		appDesc: "An EVEN cooler app description!!!",
 	});
 	//Branch folder
 	appController.add({
 		id: "draggable-JS-02",
-		name: "unnamed",
+		name: "branches",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/icon-branches.svg",
 		iconName: "BRANCHES",
 		iconParent: "desktop-icons",
+		iconYDelta: 100,
+		appDesc: "A cool app description",
 	});
 	//Loadstar icon
 	appController.add({
 		id: "draggable-JS-blankApp",
 		name: "lodestar",
-
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/Lodestar.gif",
 		iconName: "LODESTAR",
 		iconParent: "desktop-icons",
+		iconYDelta: 100,
+		appDesc: "A cool app description",
 	});
 	appController.add({
 		id: "draggable-JS-blankApp",
@@ -204,6 +226,8 @@ function initAppController() {
 		iconPath: "/img/images/vector-img/desktop/branches/RenderRD.png",
 		iconName: "Chip",
 		iconParent: "desktop-icons",
+		iconYDelta: 100,
+		appDesc: "A cool app description",
 	});
 	appController.add({
 		id: "draggable-JS-blankApp",
@@ -213,6 +237,8 @@ function initAppController() {
 		iconPath: "/img/images/vector-img/desktop/navBranchRD.svg",
 		iconName: "Science0",
 		iconParent: "sub-folder-0",
+		iconXDelta: 75,
+		appDesc: "A cool app description",
 	});
 	appController.add({
 		id: "draggable-JS-blankApp",
@@ -222,6 +248,8 @@ function initAppController() {
 		iconPath: "/img/images/vector-img/desktop/navBranchTact.svg",
 		iconName: "Science1",
 		iconParent: "sub-folder-0",
+		iconXDelta: 75,
+		appDesc: "A cool app description",
 	});
 
 	appController.open("corecli");
