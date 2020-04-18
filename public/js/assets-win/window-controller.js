@@ -254,7 +254,7 @@ function initAppController() {
 		iconName: "LOGISTICS",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "A copp app desc",
+		appDesc: "LOGISTICS - Description",
 	});
 	//Branch = Science
 	appController.add({
@@ -266,6 +266,7 @@ function initAppController() {
 		iconName: "SCIENCE",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
+		appDesc: "SCIENCE - Description",
 	});
 	//Branch = Tactical
 	appController.add({
@@ -277,7 +278,7 @@ function initAppController() {
 		iconName: "TACTICAL",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "A cool app description",
+		appDesc: "TACTICAL - Description",
 	});
 	//Branch = Diplomacy
 	appController.add({
@@ -289,7 +290,7 @@ function initAppController() {
 		iconName: "DIPLOMACY",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "A cool app description",
+		appDesc: "<h3>DIPLOMACY</h3> <br><p>The branch focused on diplomacy, roleplay and recruitment.</p>",
 	});
 
 	appController.open("corecli");
