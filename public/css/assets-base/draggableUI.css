@@ -150,6 +150,9 @@
   text-align: center;
   cursor: var(--main-cursor-pointer);
 }
+.card-text {
+ text-shadow: var(--main-text-shadow);
+}
 .icon-img {
   width: 1.5em;
 }
@@ -173,9 +176,40 @@
 
 /* Application Lodestar */
 .lode-card {
- 
+  cursor: var(--main-cursor-default);
+  
+  /* background: linear-gradient(180deg, rgba(22,22,22,1) 0%, rgba(60,119,216,0.6867121848739496) 100%);*/
+  background-image: url("../../img/images/applications/app-lodestar/lodeback.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 100%;
 }
-.card-text {
+.lode-body {
+  padding-top: 2em;
+}
+.lode-title-sub {
+  font-size: 1.5em;
+    color: #3c77d8;
+    margin-top: -19px;
+}
+.lode-card-banner {
+  width: 22em;
+}
+.lode-bflip {
+  transform: rotate(180deg);
+}
+.lode-card-text {
   padding-left: 1em;
   padding-right: 1em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-group-lode {
+  text-shadow: var(--main-text-shadow);
+  top: 2em;
+}
+.btn-lode {
+  cursor: var(--main-cursor-pointer);
+  font-size: 1.5em;
 }

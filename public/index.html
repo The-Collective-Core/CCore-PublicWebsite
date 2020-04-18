@@ -26,15 +26,10 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <!--Assets- Console -->
-  <link rel="stylesheet" type="text/css" href="./css/assets-win/console.css" />
   <!--Assets- Audio -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/assets-win/audio.css" />
-
 
   <link rel="stylesheet" type="text/css" href="css/root.css" />
-  <link rel="stylesheet" type="text/css" href="css/assets-base/base-page.css" />
   <!--<script src="js/modernizr-custom.js"></script>-->
   <!--Draggable-->
   <link rel="stylesheet" type="text/css" href="css/lib-css/draggableUI.css" />
@@ -56,9 +51,9 @@
 </div>
   <!-- Menu Right Click-->
   <div class="dropdown-menu dropdown-menu-sm" id="context-menu">
-    <a class="dropdown-item" >About Developers</a>
-    <a class="dropdown-item" >Refresh Page</a>
-    <a class="dropdown-item" >Properties</a>
+    <button class="dropdown-item">About Developers</button>
+    <button class="dropdown-item">Refresh Page</button>
+    <button class="dropdown-item" >Properties</button>
   </div>
   <!-- Body Wrapper-->
   <div class="body-sub">
@@ -135,13 +130,25 @@
 						<div id="close" type="button" class="btn close"> <i class="material-icons">close</i></div>
 					</div>
 				</div>
-				<div class="form">
+				<div class="form sub-folder">
           <div class="card lode-card">
-            <img src="/img/images/applications/app-lodestar/lodestar-head.svg" class="card-img-top" alt="...">
-            <div class="card-body">
+            
+            <div class="card-body lode-body">
               <h2 class="card-title lode-title">LODESTAR</h2>
-              <p class="card-text">Lodestar is a player alliance that pursues the technological, economical and militaristic might of all of its Members.<br>Lodestar strives to be the paragon in all aspects of design and management. It is a beacon of prosperity in a galaxy plagued by inexperience and turmoil.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h3 class="lode-title-sub">Interstellar Alliance</h3>
+              <img class="lode-card-banner lode-bflip" src="/img/images/applications/app-lodestar/lodestarHeader.png" class="card-img-top" alt="...">
+              
+              <p class="card-text lode-card-text">
+                We are an alliance that pursues the technological,<br> economical and militaristic might of all of its members.
+                <br>
+                Lodestar strives to be the paragon in all aspects of design and management. It is a beacon of prosperity in a galaxy plagued by inexperience and turmoil.
+              </p>
+              <img class="lode-card-banner" src="/img/images/applications/app-lodestar/lodestarHeader.png" class="card-img-top" alt="...">
+              <div class="btn-group btn-group-lode" role="group" aria-label="Basic example">
+                <a class="btn btn-lode" href="https://discord.gg/gD3EQCu">Discord</a>
+                <a class="btn btn-lode">Consitution</a>
+                <a class="btn btn-lode">Guilded</a>
+              </div>
             </div>
           </div>
         </div>
