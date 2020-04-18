@@ -253,6 +253,8 @@ function initAppController() {
 		iconPath: "/img/images/vector-img/desktop/branches/LG.png",
 		iconName: "LOGISTICS",
 		iconParent: "sub-folder-0",
+		iconXDelta: 75,
+		appDesc: "A copp app desc",
 	});
 	//Branch = Science
 	appController.add({
