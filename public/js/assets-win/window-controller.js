@@ -119,6 +119,13 @@ class AppController {
 			grid: [20, 20],
 		});
 		this.apps.push(app);
+		const dropDownBtn = document.createElement("p");
+		dropDownBtn.innerText = app.name;
+		dropDownBtn.classList.add("dropdown-item");
+		dropDownBtn.onclick = () => {
+			self.open(app.name);
+		};
+		document.getElementById("context-menu").appendChild(dropDownBtn);
 		this.close(app.name);
 	}
 	open(appName) {
