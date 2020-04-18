@@ -188,10 +188,11 @@ a:hover {
 }
 .dropdown-menu {
 	margin: -0.1rem 0 0;
-	border-radius: var(--border-radius-none);
-	background-color: #0f0f0f;
+	border-radius: 0px 0px 0px 5px;
+	background-color: #0f0f0fa1;
 	padding: 0rem 0;
-	border: 0px solid rgba(0,0,0,.15);
+  border-left: 1px solid rgba(255, 0, 0, 0.31);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.31);
 }
 .dropdown-item {
 	color: #c21217;
@@ -286,6 +287,7 @@ color: #0f0f0f;
 }
 
 .icon {
+  top: 2px;
     float: right;
     color: #c2141f;
     font-weight: 700;

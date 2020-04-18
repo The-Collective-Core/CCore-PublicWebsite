@@ -220,7 +220,7 @@ function initAppController() {
 	});
 	//Loadstar icon
 	appController.add({
-		id: "draggable-JS-blankApp",
+		id: "draggable-JS-lodestar",
 		name: "lodestar",
 		onOpen: () => {},
 		onClose: () => {},
@@ -230,35 +230,60 @@ function initAppController() {
 		iconYDelta: 100,
 		appDesc: "A cool app description",
 	});
+	//
+	//appController.add({
+	//	id: "draggable-JS-blankApp",
+	//	name: "chip",
+	//	onOpen: () => {},
+	//	onClose: () => {},
+	//	iconPath: "/img/images/vector-img/desktop/chip.gif",
+	//	iconName: "CHIP",
+	//	iconParent: "desktop-icons",
+	//});
+
+	// ******************************************************************* //
+	// Branch Folder Icons
+	// ******************************************************************* //
+	//Branch = Logistics
 	appController.add({
 		id: "draggable-JS-blankApp",
-		name: "chip",
+		name: "logistics",
 		onOpen: () => {},
 		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/branches/RenderRD.png",
-		iconName: "Chip",
-		iconParent: "desktop-icons",
-		iconYDelta: 100,
-		appDesc: "A cool app description",
+		iconPath: "/img/images/vector-img/desktop/branches/LG.png",
+		iconName: "LOGISTICS",
+		iconParent: "sub-folder-0",
 	});
+	//Branch = Science
 	appController.add({
 		id: "draggable-JS-blankApp",
-		name: "science0",
+		name: "science",
 		onOpen: () => {},
 		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/navBranchRD.svg",
-		iconName: "Science0",
+		iconPath: "/img/images/vector-img/desktop/branches/RD.png",
+		iconName: "SCIENCE",
+		iconParent: "sub-folder-0",
+	});
+	//Branch = Tactical
+	appController.add({
+		id: "draggable-JS-blankApp",
+		name: "tactical",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/branches/TC.png",
+		iconName: "TACTICAL",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
 		appDesc: "A cool app description",
 	});
+	//Branch = Diplomacy
 	appController.add({
 		id: "draggable-JS-blankApp",
-		name: "science1",
+		name: "diplomacy",
 		onOpen: () => {},
 		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/navBranchTact.svg",
-		iconName: "Science1",
+		iconPath: "/img/images/vector-img/desktop/branches/DP.png",
+		iconName: "DIPLOMACY",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
 		appDesc: "A cool app description",

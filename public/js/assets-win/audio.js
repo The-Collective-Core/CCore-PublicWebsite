@@ -50,6 +50,7 @@ var Framer = {
 		var dy2 = parseInt(this.scene.cy + y2);
 
 		var gradient = this.context.createLinearGradient(dx1, dy1, dx2, dy2);
+		//Audio Visual Bar Colors
 		gradient.addColorStop(0, "rgba(0, 0, 0, 0.31)");
 		gradient.addColorStop(0.6, "#660000");
 		gradient.addColorStop(1, "#FF0000");
@@ -522,7 +523,7 @@ var Controls = {
 	drawPic: function () {
 		this.context.save();
 		this.context.beginPath();
-		this.context.fillStyle = "rgb(31, 31, 31)";
+		this.context.fillStyle = "rgb(221, 0, 0)";
 		this.context.lineWidth = 1;
 		var x = Tracker.r / Math.sqrt(Math.pow(Math.tan(Tracker.angle), 2) + 1);
 		var y = Math.sqrt(Tracker.r * Tracker.r - x * x);
