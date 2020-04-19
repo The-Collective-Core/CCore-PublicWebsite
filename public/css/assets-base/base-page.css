@@ -219,6 +219,9 @@ color: #0f0f0f;
     background-color: #c21217;
     border-color: #6c757d00;
 }
+body > div.body-sub > nav > a > img {
+  margin-top: -4px;
+}
 .icon-main {
     margin-left: 5px;
     height: 20px;
