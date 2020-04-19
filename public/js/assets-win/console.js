@@ -399,6 +399,14 @@
 				case "app-list-all":
 					out = appController.listApps();
 					break;
+				case "pause":
+				case "stop-music":
+					Player.pause();
+					break;
+				case "play":
+				case "start-music":
+					Player.play();
+					break;
 			}
 			return out;
 		},
