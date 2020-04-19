@@ -127,6 +127,9 @@
   font-size: 0.9em;
   pointer-events: painted;
 }
+.desk-prop .card:active {
+  border: 1px solid rgba(255, 255, 255, 0.58);
+}
 
 /* Default SubFolder Size - Container*/
 .sub-folder { 
@@ -159,7 +162,7 @@
 /* Icon Card on Grab*/
 .card:active {
   cursor: var(--main-cursor-grabbing);
-  border: 1px solid rgba(255, 255, 255, 0.58);
+  
 }
 /* Icon Card Inner Properties*/
 .card-body {
@@ -183,6 +186,9 @@
   background-size: cover;
   border: solid 1px #0f0f0f;
   height: 100%;
+}
+#draggable-JS-lodestar > div.form.sub-folder > div {
+  border: 0px solid rgba(255, 255, 255, 0.58);
 }
 .lode-body {
   padding-top: 2em;
