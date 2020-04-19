@@ -312,6 +312,8 @@ const purge2 =
 					? arguments[0]
 					: {};
 			var out = "";
+			// out = commandHandler.run(cmd);
+			// return out;
 			switch (cmd.command) {
 				/* CMD- Null */
 				case "":
