@@ -1,3 +1,7 @@
+const DEFAULT_X_POS = 20;
+const DEFAULT_Y_POS = 35;
+const DEFAULT_WRAP_PT_X = 1000;
+const DEFAULT_WRAP_PT_Y = 900;
 class Application {
 	constructor(opts) {
 		this.id = opts.id;
@@ -171,7 +175,7 @@ class AppController {
 		return app.appDesc;
 	}
 	listApps() {
-		return this.apps.map((app) => app.name).join("\n");
+		return this.apps.map((app) => app.name).join(", ");
 	}
 }
 var appController = new AppController();
