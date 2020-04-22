@@ -216,6 +216,15 @@
   top: 2em;
 }
 .btn-lode {
+  color: #fff!important;
   cursor: var(--main-cursor-pointer);
   font-size: 1.5em;
+  border-radius: var(--border-radius-3)!important;
+
+}
+.btn-outline-lode {
+  border-color: #3c77d8;
+}
+.btn-outline-lode:hover{
+  background-color: #3c77d8;
 }

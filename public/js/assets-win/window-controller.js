@@ -205,7 +205,7 @@ function initAppController() {
 			out = "Type 'help' for more information.";
 		},
 		iconPath: "/img/images/vector-img/desktop/centralmind.png",
-		iconName: "Cental Mind",
+		iconName: "CENTRAL MIND",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc: "An EVEN cooler app description!!!",
