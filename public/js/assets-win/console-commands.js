@@ -69,8 +69,8 @@ commandHandler.add({
 	name: "clear",
 	helpMsg: "Clear the console",
 	extendedHelp: "Clears the console. <br> Usage: clear",
-	run: () => {
-		view.clearTerminal();
+	run: function () {
+		cliView.clearTerminal();
 		return "Type 'help' for more information.";
 	},
 	aliases: ["cls"],
@@ -139,8 +139,8 @@ commandHandler.add({
 commandHandler.add({
 	name: "close",
 	helpMsg: "Closes an app",
-	extendedHelp: "Closes up an application. <br> Usage: open [app name]",
-	run: (appName) => appController.open(appName),
+	extendedHelp: "Closes up an application. <br> Usage: close [app name]",
+	run: (appName) => appController.close(appName),
 	aliases: ["end"],
 });
 commandHandler.add({
@@ -187,6 +187,6 @@ commandHandler.add({
 	name: "play",
 	helpMsg: "Plays the music player",
 	extendedHelp: "Plays the music player. <br> Usage: play ",
-	run: () => Player.pause(),
+	run: () => Player.play(),
 	aliases: ["start-music"],
 });

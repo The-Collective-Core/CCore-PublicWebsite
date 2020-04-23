@@ -1,3 +1,4 @@
+let cliView;
 (function app() {
 	var event = {
 		init: function init() {
@@ -290,6 +291,7 @@
 			}
 		},
 	};
+	cliView = view;
 
 	var controller = {
 		triggerCtrlCodes: function triggerCtrlCodes(codename) {
@@ -313,7 +315,7 @@
 				arguments.length > 0 && arguments[0] !== undefined
 					? arguments[0]
 					: {};
-			return commandHandler.run(cmd);
+			return commandHandler.run(cmd) || "";
 		},
 		getCommand: function getCommand() {
 			var prompt =
