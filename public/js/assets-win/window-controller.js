@@ -138,7 +138,7 @@ class AppController {
 		dropDownBtn.onmouseup = () => {
 			$("#context-menu").removeClass("show1").hide();
 		};
-		document.getElementById("context-menu").appendChild(dropDownBtn);
+		document.getElementById("dropDownMenu2").appendChild(dropDownBtn);
 		this.close(app.name);
 	}
 	open(appName) {
@@ -283,7 +283,8 @@ function initAppController() {
 		iconName: "SCIENCE",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
-		appDesc: "<br>The think tank of R&D brainstorms and creates solutions for the problems all other branches of the Collective run into. Engineering a better tomorrow for the Collective, today.<br><br> -Hatman | [Branch Core]<br>",
+		appDesc:
+			"<br>The think tank of R&D brainstorms and creates solutions for the problems all other branches of the Collective run into. Engineering a better tomorrow for the Collective, today.<br><br> -Hatman | [Branch Core]<br>",
 	});
 	//Branch = Tactical
 	appController.add({
@@ -307,7 +308,8 @@ function initAppController() {
 		iconName: "DIPLOMACY",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "<h3>DIPLOMACY</h3> <br><p>The branch focused on diplomacy, roleplay and recruitment.</p>",
+		appDesc:
+			"<h3>DIPLOMACY</h3> <br><p>The branch focused on diplomacy, roleplay and recruitment.</p>",
 	});
 
 	appController.open("corecli");
