@@ -205,7 +205,7 @@ function initAppController() {
 			out = "Type 'help' for more information.";
 		},
 		iconPath: "/img/images/vector-img/desktop/centralmind.png",
-		iconName: "Cental Mind",
+		iconName: "CENTRAL MIND",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
 		appDesc: "An EVEN cooler app description!!!",
@@ -250,7 +250,7 @@ function initAppController() {
 	// ******************************************************************* //
 	//Branch = Logistics
 	appController.add({
-		id: "draggable-JS-blankApp",
+		id: "draggable-JS-Logistics",
 		name: "logistics",
 		onOpen: () => {},
 		onClose: () => {},
@@ -258,11 +258,11 @@ function initAppController() {
 		iconName: "LOGISTICS",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "LOGISTICS - Description",
+		appDesc: "LOGISTICS -This branch is the lifeblood of the Collective",
 	});
 	//Branch = Science
 	appController.add({
-		id: "draggable-JS-blankApp",
+		id: "draggable-JS-Science",
 		name: "science",
 		onOpen: () => {},
 		onClose: () => {},
@@ -270,11 +270,11 @@ function initAppController() {
 		iconName: "SCIENCE",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
-		appDesc: "SCIENCE - Description",
+		appDesc: "<br>The think tank of R&D brainstorms and creates solutions for the problems all other branches of the Collective run into. Engineering a better tomorrow for the Collective, today.<br><br> -Hatman | [Branch Core]<br>",
 	});
 	//Branch = Tactical
 	appController.add({
-		id: "draggable-JS-blankApp",
+		id: "draggable-JS-Tactical", 
 		name: "tactical",
 		onOpen: () => {},
 		onClose: () => {},
@@ -286,7 +286,7 @@ function initAppController() {
 	});
 	//Branch = Diplomacy
 	appController.add({
-		id: "draggable-JS-blankApp",
+		id: "draggable-JS-Diplomacy",
 		name: "diplomacy",
 		onOpen: () => {},
 		onClose: () => {},

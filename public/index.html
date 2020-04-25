@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Collective</title>
-	<meta name="description" content="Collective Public Website" />
+	<meta name="description" content="Through Unity we Evolve. CoreOS functions as an online system that provides our [Collective] users the tools & platform needed to make an impact!" />
 	<meta name="keywords" content="tech, ai, starbase" />
 	<meta name="author" content="Timothy. H" />
 	<!-- Assets - Favicons - Img-->
@@ -19,22 +19,24 @@
 	<!-- Assets - Favicons - Img-->
 	<meta name="msapplication-TileColor" content="#2b5797">
 	<meta name="msapplication-TileImage" content="img/fav/mstile-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+	<meta name="theme-color" content="#0f0f0f">
 	<!-- Assets - Stylesheets / Scripts -->
 	<link rel="shortcut icon" href="favicon.ico">
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<!--Assets- Audio -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
+	<script src="js/vendor/prefixfree.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/root.css" />
 	<!--<script src="js/modernizr-custom.js"></script>-->
 	<!--Draggable-->
 	<link rel="stylesheet" type="text/css" href="css/lib-css/draggableUI.css" />
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/vendor/jquery-1.12.4.js"></script>
+	<script src="js/vendor/jquery-ui.js"></script>
+
 	<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
 	<!-- PreLoader -->
@@ -54,6 +56,7 @@
 		<button class="dropdown-item">About Developers</button>
 		<button class="dropdown-item">Refresh Page</button>
 		<button class="dropdown-item">Properties</button>
+		<div class="dropDownMenu2"></div>
 	</div>
 	<!-- Body Wrapper-->
 	<div class="body-sub">
@@ -66,10 +69,12 @@
 		<!-- Navbar -->
 		<nav class="navbar">
 			<a class="navbar-brand" href="#">
-				<img class="icon-main" src="../img/fav/favicon-16x16.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				<img class="icon-main" src="../img/fav/ColLogo.gif" width="30" height="30" class="d-inline-block align-top" alt="">
 				COLLECTIVE-SYSTEMS
 			</a>
-			<div class="btn-group">
+
+			<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+			<div class="btn-group app-list">
 				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					APPS
 				</button>
@@ -100,7 +105,7 @@
 					<!-- Desktop Drag -Icons -->
 					<div id="desktop-icons"></div>
 					<!-- Windows Applications-->
-					<!-- App -Blank-->
+					<!-- App -Blank
 					<div id="draggable-JS-blankApp" class="win-prop application-non-drag">
 						<div class="header">
 							<div class="sub-menu-title">
@@ -109,13 +114,73 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
-								<div id="close" type="button" class="btn close"> <i class="material-icons">close</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
+							</div>
+						</div>
+						<div class="form"></div>
+					</div>-->
+					<!-- App -Branch - Logistics-->
+					<div id="draggable-JS-Logistics" class="win-prop application-non-drag">
+						<div class="header">
+							<div class="sub-menu-title">
+								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/branches/icons/LG.gif" alt="Card image cap"></div>
+								<div class="text">LOGISTICS</div>
+							</div>
+							<div class="buttons">
+								<div class="btn minus"> <i class="material-icons">remove</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
 						<div class="form"></div>
 					</div>
-					<!-- App -Blank-->
+					<!-- App -Branch - Science-->
+					<div id="draggable-JS-Science" class="win-prop application-non-drag">
+						<div class="header">
+							<div class="sub-menu-title">
+								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/branches/icons/RD.gif" alt="Card image cap"></div>
+								<div class="text">SCIENCE</div>
+							</div>
+							<div class="buttons">
+								<div class="btn minus"> <i class="material-icons">remove</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
+							</div>
+						</div>
+						<div class="form"></div>
+					</div>
+					<!-- App -Branch - Tactical-->
+					<div id="draggable-JS-Tactical" class="win-prop application-non-drag">
+						<div class="header">
+							<div class="sub-menu-title">
+								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/branches/icons/TC.gif" alt="Card image cap"></div>
+								<div class="text">TACTICAL</div>
+							</div>
+							<div class="buttons">
+								<div class="btn minus"> <i class="material-icons">remove</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
+							</div>
+						</div>
+						<div class="form"></div>
+					</div>
+					<!-- App -Branch - Diplomacy-->
+					<div id="draggable-JS-Diplomacy" class="win-prop application-non-drag">
+						<div class="header">
+							<div class="sub-menu-title">
+								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/branches/icons/DP.gif" alt="Card image cap"></div>
+								<div class="text">DIPLOMACY</div>
+							</div>
+							<div class="buttons">
+								<div class="btn minus"> <i class="material-icons">remove</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
+							</div>
+						</div>
+						<div class="form"></div>
+					</div>
+					<!-- App -Lodestar-->
 					<div id="draggable-JS-lodestar" class="win-prop application-non-drag">
 						<div class="header">
 							<div class="sub-menu-title">
@@ -124,8 +189,8 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
-								<div id="close" type="button" class="btn close"> <i class="material-icons">close</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
 						<div class="form sub-folder">
@@ -143,9 +208,11 @@
 									</p>
 									<img class="lode-card-banner" src="/img/images/applications/app-lodestar/lodestarHeader.png" class="card-img-top" alt="...">
 									<div class="btn-group btn-group-lode" role="group" aria-label="Basic example">
-										<a class="btn btn-lode" href="https://discord.gg/gD3EQCu">Discord</a>
-										<a class="btn btn-lode">Consitution</a>
-										<a class="btn btn-lode">Guilded</a>
+										<a class="btn btn-lode btn-outline-lode" target="_blank" href="https://discord.gg/gD3EQCu">Discord</a>
+										<a class="btn btn-lode">-</a>
+										<a class="btn btn-lode btn-outline-lode" target="_blank" href="https://docs.google.com/document/d/1CbGqRYVEeDNeyX8ELoDF9kbnkh0Mu_VSpc4Qm3L248E/edit">Constitution</a>
+										<a class="btn btn-lode ">-</a>
+										<a class="btn btn-lode btn-outline-lode" target="_blank" href="https://www.guilded.gg/i/3E0w3obp">Guilded</a>
 									</div>
 								</div>
 							</div>
@@ -160,7 +227,7 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
+								
 								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
@@ -177,7 +244,7 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
+								
 								<div id="close01" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
@@ -195,7 +262,7 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
+								
 								<div id="close02" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
@@ -241,15 +308,39 @@
 				}).on("click", function() {
 					$("#context-menu").removeClass("show1").hide();
 				});
-
-				$("#context-menu").on("mousedown", function() {
-					$(this).parent().removeClass("show1").hide();
-				});
-
-				$("#context-menu a").on("click", function() {
-					$(this).parent().removeClass("show1").hide();
-				});
 			</script>
+			<script>
+				function showTime(){
+				var date = new Date();
+				var h = date.getHours(); // 0 - 23
+				var m = date.getMinutes(); // 0 - 59
+				var s = date.getSeconds(); // 0 - 59
+				var session = "AM";
+				
+				if(h == 0){
+					h = 12;
+				}
+				
+				if(h > 12){
+					h = h - 12;
+					session = "PM";
+				}
+				
+				h = (h < 10) ? "0" + h : h;
+				m = (m < 10) ? "0" + m : m;
+				s = (s < 10) ? "0" + s : s;
+				
+				var time = h + ":" + m + ":" + s + " " + session;
+				document.getElementById("MyClockDisplay").innerText = time;
+				document.getElementById("MyClockDisplay").textContent = time;
+				
+				setTimeout(showTime, 1000);
+				
+			}
+
+			showTime();
+			</script>
+			
 		</div>
 </body>
 

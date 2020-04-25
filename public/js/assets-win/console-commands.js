@@ -41,7 +41,7 @@ class ConsoleHandler {
 		return txt;
 	}
 }
-const commandHandler = new ConsoleHandler("Unknown command");
+const commandHandler = new ConsoleHandler("Unknown Command");
 commandHandler.add({
 	name: "help",
 	helpMsg: "Its help lmao",

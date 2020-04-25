@@ -219,14 +219,18 @@ color: #0f0f0f;
     background-color: #c21217;
     border-color: #6c757d00;
 }
+body > div.body-sub > nav > a > img {
+  margin-top: -4px;
+}
 .icon-main {
     margin-left: 5px;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 }
 /* Window Settings */
 .navbar{
-	background: rgb(15, 15, 15);
+  background: rgb(15, 15, 15);
+  height: 2.5em;
 	color: rgb(255, 255, 255);
 	padding: 0rem 0rem;
 	border-radius: var(--border-radius-none);
@@ -309,4 +313,31 @@ color: #0f0f0f;
 }
 #context-menu .dropdown-item {
 	text-align: left;
+}
+
+
+
+
+.clock {
+  cursor: var(--main-cursor-default);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #c21217;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 7px;
+ 
+
+
+}
+
+.dropDownMenu2 {
+  border: 1px solid rgba(255, 0, 0, 0.31);
+}
+
+
+.app-list {
+  height: 100%;
 }
