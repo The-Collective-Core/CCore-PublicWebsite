@@ -20,7 +20,6 @@ function showTime() {
 	document.getElementById("MyClockDisplay").textContent = time;
 }
 setInterval(showTime, 1000);
-
 //Setup context menu
 $(".body-sub")
 	.on("contextmenu", function (e) {
