@@ -199,7 +199,7 @@ function initAppController() {
 	//Discord application
 	appController.add({
 		id: "draggable-JS-00",
-		name: "discord",
+		name: "DISCORD",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/icon-discord.svg",
@@ -211,7 +211,7 @@ function initAppController() {
 	//Command line app
 	appController.add({
 		id: "draggable-JS-01",
-		name: "corecli",
+		name: "CENTRAL MIND",
 		onOpen: () => {},
 		onClose: () => {
 			// view.clearTerminal();
@@ -226,7 +226,7 @@ function initAppController() {
 	//Branch folder
 	appController.add({
 		id: "draggable-JS-02",
-		name: "branches",
+		name: "BRANCHES",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/icon-branches.svg",
@@ -238,7 +238,7 @@ function initAppController() {
 	//Loadstar icon
 	appController.add({
 		id: "draggable-JS-lodestar",
-		name: "lodestar",
+		name: "LODESTAR",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/Lodestar.gif",
@@ -264,7 +264,7 @@ function initAppController() {
 	//Branch = Logistics
 	appController.add({
 		id: "draggable-JS-Logistics",
-		name: "logistics",
+		name: "LOGISTICS",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/LG.png",
@@ -276,20 +276,19 @@ function initAppController() {
 	//Branch = Science
 	appController.add({
 		id: "draggable-JS-Science",
-		name: "science",
+		name: "SCIENCE",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/RD.png",
 		iconName: "SCIENCE",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
-		appDesc:
-			"<br>The think tank of R&D brainstorms and creates solutions for the problems all other branches of the Collective run into. Engineering a better tomorrow for the Collective, today.<br><br> -Hatman | [Branch Core]<br>",
+		appDesc: "<br>The think tank of R&D brainstorms and creates solutions for the problems all other branches of the Collective run into. Engineering a better tomorrow for the Collective, today.<br><br> -Hatman | [Branch Core]<br>",
 	});
 	//Branch = Tactical
 	appController.add({
 		id: "draggable-JS-Tactical",
-		name: "tactical",
+		name: "TACTICAL",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/TC.png",
@@ -301,15 +300,14 @@ function initAppController() {
 	//Branch = Diplomacy
 	appController.add({
 		id: "draggable-JS-Diplomacy",
-		name: "diplomacy",
+		name: "DIPLOMACY",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/DP.png",
 		iconName: "DIPLOMACY",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc:
-			"<h3>DIPLOMACY</h3> <br><p>The branch focused on diplomacy, roleplay and recruitment.</p>",
+		appDesc: "<h3>DIPLOMACY</h3> <br><p>The branch focused on diplomacy, roleplay and recruitment.</p>",
 	});
 
 	appController.open("corecli");
