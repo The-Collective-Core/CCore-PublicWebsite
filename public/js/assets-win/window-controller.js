@@ -186,7 +186,7 @@ function initAppController() {
 	//Discord application
 	appController.add({
 		id: "draggable-JS-00",
-		name: "DISCORD",
+		name: "discord",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/icon-discord.svg",
@@ -198,7 +198,7 @@ function initAppController() {
 	//Command line app
 	appController.add({
 		id: "draggable-JS-01",
-		name: "CENTRAL MIND",
+		name: "corecli",
 		onOpen: () => {},
 		onClose: () => {
 			// view.clearTerminal();
@@ -213,7 +213,7 @@ function initAppController() {
 	//Branch folder
 	appController.add({
 		id: "draggable-JS-02",
-		name: "BRANCHES",
+		name: "branches",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/icon-branches.svg",
@@ -225,7 +225,7 @@ function initAppController() {
 	//Loadstar icon
 	appController.add({
 		id: "draggable-JS-lodestar",
-		name: "LODESTAR",
+		name: "lodestar",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/Lodestar.gif",
@@ -251,7 +251,7 @@ function initAppController() {
 	//Branch = Logistics
 	appController.add({
 		id: "draggable-JS-Logistics",
-		name: "LOGISTICS",
+		name: "logistics",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/LG.png",
@@ -263,7 +263,7 @@ function initAppController() {
 	//Branch = Science
 	appController.add({
 		id: "draggable-JS-Science",
-		name: "SCIENCE",
+		name: "science",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/RD.png",
@@ -275,7 +275,7 @@ function initAppController() {
 	//Branch = Tactical
 	appController.add({
 		id: "draggable-JS-Tactical", 
-		name: "TACTICAL",
+		name: "tactical",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/TC.png",
@@ -287,7 +287,7 @@ function initAppController() {
 	//Branch = Diplomacy
 	appController.add({
 		id: "draggable-JS-Diplomacy",
-		name: "DIPLOMACY",
+		name: "diplomacy",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/DP.png",
