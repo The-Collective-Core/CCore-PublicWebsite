@@ -211,7 +211,7 @@ function initAppController() {
 	//Command line app
 	appController.add({
 		id: "draggable-JS-01",
-		name: "CENTRAL MIND",
+		name: "CENTRAL-MIND",
 		onOpen: () => {},
 		onClose: () => {
 			// view.clearTerminal();
@@ -312,7 +312,7 @@ function initAppController() {
 			"<h3>DIPLOMACY</h3> <br><p>The branch focused on diplomacy, roleplay and recruitment.</p>",
 	});
 
-	appController.open("corecli");
+	appController.open("CENTRAL-MIND");
 }
 
 function saveIcons() {
