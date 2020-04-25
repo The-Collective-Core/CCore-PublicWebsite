@@ -56,6 +56,7 @@
 		<button class="dropdown-item">About Developers</button>
 		<button class="dropdown-item">Refresh Page</button>
 		<button class="dropdown-item">Properties</button>
+		<div class="dropDownMenu2"></div>
 	</div>
 	<!-- Body Wrapper-->
 	<div class="body-sub">
@@ -71,7 +72,9 @@
 				<img class="icon-main" src="../img/fav/ColLogo.gif" width="30" height="30" class="d-inline-block align-top" alt="">
 				COLLECTIVE-SYSTEMS
 			</a>
-			<div class="btn-group">
+
+			<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+			<div class="btn-group app-list">
 				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					APPS
 				</button>
@@ -102,7 +105,7 @@
 					<!-- Desktop Drag -Icons -->
 					<div id="desktop-icons"></div>
 					<!-- Windows Applications-->
-					<!-- App -Blank-->
+					<!-- App -Blank
 					<div id="draggable-JS-blankApp" class="win-prop application-non-drag">
 						<div class="header">
 							<div class="sub-menu-title">
@@ -111,13 +114,73 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
+							</div>
+						</div>
+						<div class="form"></div>
+					</div>-->
+					<!-- App -Branch - Logistics-->
+					<div id="draggable-JS-Logistics" class="win-prop application-non-drag">
+						<div class="header">
+							<div class="sub-menu-title">
+								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/branches/icons/LG.gif" alt="Card image cap"></div>
+								<div class="text">LOGISTICS</div>
+							</div>
+							<div class="buttons">
+								<div class="btn minus"> <i class="material-icons">remove</i></div>
+								
 								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
 						<div class="form"></div>
 					</div>
-					<!-- App -Blank-->
+					<!-- App -Branch - Science-->
+					<div id="draggable-JS-Science" class="win-prop application-non-drag">
+						<div class="header">
+							<div class="sub-menu-title">
+								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/branches/icons/RD.gif" alt="Card image cap"></div>
+								<div class="text">SCIENCE</div>
+							</div>
+							<div class="buttons">
+								<div class="btn minus"> <i class="material-icons">remove</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
+							</div>
+						</div>
+						<div class="form"></div>
+					</div>
+					<!-- App -Branch - Tactical-->
+					<div id="draggable-JS-Tactical" class="win-prop application-non-drag">
+						<div class="header">
+							<div class="sub-menu-title">
+								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/branches/icons/TC.gif" alt="Card image cap"></div>
+								<div class="text">TACTICAL</div>
+							</div>
+							<div class="buttons">
+								<div class="btn minus"> <i class="material-icons">remove</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
+							</div>
+						</div>
+						<div class="form"></div>
+					</div>
+					<!-- App -Branch - Diplomacy-->
+					<div id="draggable-JS-Diplomacy" class="win-prop application-non-drag">
+						<div class="header">
+							<div class="sub-menu-title">
+								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/branches/icons/DP.gif" alt="Card image cap"></div>
+								<div class="text">DIPLOMACY</div>
+							</div>
+							<div class="buttons">
+								<div class="btn minus"> <i class="material-icons">remove</i></div>
+								
+								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
+							</div>
+						</div>
+						<div class="form"></div>
+					</div>
+					<!-- App -Lodestar-->
 					<div id="draggable-JS-lodestar" class="win-prop application-non-drag">
 						<div class="header">
 							<div class="sub-menu-title">
@@ -126,7 +189,7 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
+								
 								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
@@ -164,7 +227,7 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
+								
 								<div id="close00" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
@@ -181,7 +244,7 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
+								
 								<div id="close01" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
@@ -199,7 +262,7 @@
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								<div class="btn expand"> <i class="material-icons">crop_square</i></div>
+								
 								<div id="close02" type="button" class="btn close"> <i class="material-icons">close</i></div>
 							</div>
 						</div>
@@ -245,14 +308,37 @@
 				}).on("click", function() {
 					$("#context-menu").removeClass("show1").hide();
 				});
+			</script>
+			<script>
+				function showTime(){
+				var date = new Date();
+				var h = date.getHours(); // 0 - 23
+				var m = date.getMinutes(); // 0 - 59
+				var s = date.getSeconds(); // 0 - 59
+				var session = "AM";
+				
+				if(h == 0){
+					h = 12;
+				}
+				
+				if(h > 12){
+					h = h - 12;
+					session = "PM";
+				}
+				
+				h = (h < 10) ? "0" + h : h;
+				m = (m < 10) ? "0" + m : m;
+				s = (s < 10) ? "0" + s : s;
+				
+				var time = h + ":" + m + ":" + s + " " + session;
+				document.getElementById("MyClockDisplay").innerText = time;
+				document.getElementById("MyClockDisplay").textContent = time;
+				
+				setTimeout(showTime, 1000);
+				
+			}
 
-				$("#context-menu").on("mousedown", function() {
-					$(this).parent().removeClass("show1").hide();
-				});
-
-				$("#context-menu a").on("click", function() {
-					$(this).parent().removeClass("show1").hide();
-				});
+			showTime();
 			</script>
 		</div>
 </body>

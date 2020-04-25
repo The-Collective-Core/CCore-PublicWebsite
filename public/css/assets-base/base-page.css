@@ -314,3 +314,30 @@ body > div.body-sub > nav > a > img {
 #context-menu .dropdown-item {
 	text-align: left;
 }
+
+
+
+
+.clock {
+  cursor: var(--main-cursor-default);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #c21217;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 7px;
+ 
+
+
+}
+
+.dropDownMenu2 {
+  border: 1px solid rgba(255, 0, 0, 0.31);
+}
+
+
+.app-list {
+  height: 100%;
+}
