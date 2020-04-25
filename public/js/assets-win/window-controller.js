@@ -36,7 +36,6 @@ class AppController {
 				otherApp.elm.style.zIndex = 1;
 			});
 			app.elm.style.zIndex = 2;
-			$("#context-menu").removeClass("show1").hide();
 		};
 		//Make app draggable
 		$("#" + app.id).draggable({
@@ -47,11 +46,6 @@ class AppController {
 		//Make app closable
 		const closeButton = app.elm.getElementsByClassName("btn close")[0];
 		closeButton.onclick = () => {
-			self.close(app.name);
-		};
-
-		const minimButton = app.elm.getElementsByClassName("btn minus")[0];
-		minimButton.onclick = () => {
 			self.close(app.name);
 		};
 
@@ -129,16 +123,13 @@ class AppController {
 			grid: [20, 20],
 		});
 		this.apps.push(app);
-		const dropDownBtn = document.createElement("button");
+		const dropDownBtn = document.createElement("p");
 		dropDownBtn.innerText = app.name;
 		dropDownBtn.classList.add("dropdown-item");
 		dropDownBtn.onclick = () => {
 			self.open(app.name);
 		};
-		dropDownBtn.onmouseup = () => {
-			$("#context-menu").removeClass("show1").hide();
-		};
-		document.getElementById("dropDownMenu2").appendChild(dropDownBtn);
+		document.getElementById("context-menu").appendChild(dropDownBtn);
 		this.close(app.name);
 	}
 	open(appName) {
@@ -147,10 +138,6 @@ class AppController {
 			console.log("Unknown app %s", appName);
 			return;
 		}
-		this.apps.forEach((otherApp) => {
-			otherApp.elm.style.zIndex = 1;
-		});
-		app.elm.style.zIndex = 2;
 		$("#" + app.id)
 			.removeClass("application-non-drag")
 			.addClass("application");
@@ -199,7 +186,7 @@ function initAppController() {
 	//Discord application
 	appController.add({
 		id: "draggable-JS-00",
-		name: "DISCORD",
+		name: "discord",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/icon-discord.svg",
@@ -211,7 +198,7 @@ function initAppController() {
 	//Command line app
 	appController.add({
 		id: "draggable-JS-01",
-		name: "CENTRAL MIND",
+		name: "corecli",
 		onOpen: () => {},
 		onClose: () => {
 			// view.clearTerminal();
@@ -226,7 +213,7 @@ function initAppController() {
 	//Branch folder
 	appController.add({
 		id: "draggable-JS-02",
-		name: "BRANCHES",
+		name: "branches",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/icon-branches.svg",
@@ -238,7 +225,7 @@ function initAppController() {
 	//Loadstar icon
 	appController.add({
 		id: "draggable-JS-lodestar",
-		name: "LODESTAR",
+		name: "lodestar",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/Lodestar.gif",
@@ -264,7 +251,7 @@ function initAppController() {
 	//Branch = Logistics
 	appController.add({
 		id: "draggable-JS-Logistics",
-		name: "LOGISTICS",
+		name: "logistics",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/LG.png",
@@ -276,20 +263,19 @@ function initAppController() {
 	//Branch = Science
 	appController.add({
 		id: "draggable-JS-Science",
-		name: "SCIENCE",
+		name: "science",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/RD.png",
 		iconName: "SCIENCE",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
-		appDesc:
-			"<br>The think tank of R&D brainstorms and creates solutions for the problems all other branches of the Collective run into. Engineering a better tomorrow for the Collective, today.<br><br> -Hatman | [Branch Core]<br>",
+		appDesc: "<br>The think tank of R&D brainstorms and creates solutions for the problems all other branches of the Collective run into. Engineering a better tomorrow for the Collective, today.<br><br> -Hatman | [Branch Core]<br>",
 	});
 	//Branch = Tactical
 	appController.add({
-		id: "draggable-JS-Tactical",
-		name: "TACTICAL",
+		id: "draggable-JS-Tactical", 
+		name: "tactical",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/TC.png",
@@ -301,15 +287,14 @@ function initAppController() {
 	//Branch = Diplomacy
 	appController.add({
 		id: "draggable-JS-Diplomacy",
-		name: "DIPLOMACY",
+		name: "diplomacy",
 		onOpen: () => {},
 		onClose: () => {},
 		iconPath: "/img/images/vector-img/desktop/branches/DP.png",
 		iconName: "DIPLOMACY",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc:
-			"<h3>DIPLOMACY</h3> <br><p>The branch focused on diplomacy, roleplay and recruitment.</p>",
+		appDesc: "<h3>DIPLOMACY</h3> <br><p>The branch focused on diplomacy, roleplay and recruitment.</p>",
 	});
 
 	appController.open("corecli");
