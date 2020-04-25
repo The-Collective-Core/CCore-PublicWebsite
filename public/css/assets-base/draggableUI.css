@@ -65,6 +65,7 @@
 }
 /* Win -AppHeader SubText */
 .win-prop .header .sub-menu-title .text {
+  top: 2px;
   height: 25px;
   position: relative;
   padding: 0px 8px;
@@ -228,3 +229,83 @@
 .btn-outline-lode:hover{
   background-color: #3c77d8;
 }
+/* Application Diplomacy*/
+.diplo-card {
+  background-image: url("../../img/images/applications/app-branches/bg-dp.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 25.7em;
+}
+.dipl-quote strong {
+  font-style: normal;
+color: #6464FF;
+}
+
+
+
+
+/* Application Diplomacy*/
+.tact-card {
+  background-image: url("../../img/images/applications/app-branches/bg-tc.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 25.7em;
+}
+.tact-quote strong {
+  font-style: normal;
+color: #F1C40F;
+}
+/* Application Science*/
+.scie-card {
+  background-image: url("../../img/images/applications/app-branches/bg-rd.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 25.7em;
+}
+.scie-quote strong {
+  font-style: normal;
+color: #AD0F59;
+}
+/* Application Logistics*/
+.logi-card {
+  background-image: url("../../img/images/applications/app-branches/bg-lg.png");
+  background-size: cover;
+  border: solid 1px #0f0f0f;
+  height: 25.7em;
+}
+.logi-quote strong {
+  font-style: normal;
+color: #FF531F;
+}
+
+
+
+
+
+
+.app-li {
+  list-style-position: inside;
+  list-style: none;
+  margin-left: -44px;
+
+}
+
+.branch-title-sub {
+  font-size: 1.5em;
+  color: #ff0007;
+    margin-top: -19px;
+}
+
+.branch-card-text {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1em;
+}
+.card-quote {
+  font-style: italic;
+  color: #ffffff;
+}
+
+
