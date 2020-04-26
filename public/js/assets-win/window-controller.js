@@ -206,7 +206,7 @@ function initAppController() {
 		iconName: "DISCORD",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
-		appDesc: "A cool app description",
+		appDesc: "Collectives Communication.",
 	});
 	//Command line app
 	appController.add({
@@ -221,7 +221,7 @@ function initAppController() {
 		iconName: "CENTRAL MIND",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
-		appDesc: "An EVEN cooler app description!!!",
+		appDesc: "Interactable Command Line Interface.",
 	});
 	//Branch folder
 	appController.add({
@@ -233,7 +233,7 @@ function initAppController() {
 		iconName: "BRANCHES",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
-		appDesc: "A cool app description",
+		appDesc: "Collectives Operational Arms",
 	});
 	//Loadstar icon
 	appController.add({
@@ -245,7 +245,7 @@ function initAppController() {
 		iconName: "LODESTAR",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
-		appDesc: "A cool app description",
+		appDesc: "Interstellar Alliance between many factions.",
 	});
 	//
 	//appController.add({
@@ -271,7 +271,7 @@ function initAppController() {
 		iconName: "LOGISTICS",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "LOGISTICS -This branch is the lifeblood of the Collective",
+		appDesc: "<strong>LOGISTICS</strong> -This branch is the lifeblood of the Collective!",
 	});
 	//Branch = Science
 	appController.add({
@@ -283,8 +283,7 @@ function initAppController() {
 		iconName: "SCIENCE",
 		iconXDelta: 75,
 		iconParent: "sub-folder-0",
-		appDesc:
-			"<br>The think tank of R&D brainstorms and creates solutions for the problems all other branches of the Collective run into. Engineering a better tomorrow for the Collective, today.<br><br> -Hatman | [Branch Core]<br>",
+		appDesc: "<strong>SCIENCE</strong> -For every problem there is a solution!",
 	});
 	//Branch = Tactical
 	appController.add({
@@ -296,7 +295,7 @@ function initAppController() {
 		iconName: "TACTICAL",
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
-		appDesc: "TACTICAL - Description",
+		appDesc: "<strong>TACTICAL</strong> -S.W.A.R.M. stands for Space Warfare and Advanced Response Module. ",
 	});
 	//Branch = Diplomacy
 	appController.add({
@@ -309,7 +308,7 @@ function initAppController() {
 		iconParent: "sub-folder-0",
 		iconXDelta: 75,
 		appDesc:
-			"<h3>DIPLOMACY</h3> <br><p>The branch focused on diplomacy, roleplay and recruitment.</p>",
+			"<strong>DIPLOMACY</strong> -The branch focused on diplomacy, roleplay and recruitment.</p>",
 	});
 
 	appController.open("CENTRAL-MIND");
