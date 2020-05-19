@@ -573,9 +573,9 @@ var Player = {
 
 	tracks: [
 		{
-			artist: "West Side Lane",
-			song: "Lost Years",
-			src: "../../media/glitch.mp3",
+			artist: "Nocturnal",
+			song: "The Midnight",
+			src: "../../media/TheMidnightNocturnal.mp3",
 		},
 	],
 

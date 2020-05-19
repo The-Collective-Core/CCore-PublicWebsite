@@ -18,9 +18,9 @@
   border-left: 1px solid rgb(15, 15, 15)!important;
     border-right: 1px solid rgb(15, 15, 15)!important;
     border-bottom: 1px solid rgb(15, 15, 15)!important;
-    -webkit-box-shadow: inset 0px 13px 17px -13px rgba(214,0,0,1);
-    -moz-box-shadow: inset 0px 13px 17px -13px rgba(214,0,0,1);
-    box-shadow: inset 0px 13px 17px -13px rgba(214,0,0,1);
+    -webkit-box-shadow: var(--webkit-boxshadow-red);
+    -moz-box-shadow: var(--moz-boxshadow-red);
+    box-shadow: var(--box-boxshadow-red);
   }
   
   #terminal::-webkit-scrollbar {

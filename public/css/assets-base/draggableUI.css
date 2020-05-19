@@ -30,6 +30,23 @@
   font-size: 0.9em;
   background-color: rgba(29, 31, 32, 0.75);
 }
+
+.win-prop-circle {
+  box-shadow: var(--box-boxshadow);
+  -moz-box-shadow: var(--moz-boxshadow);
+  -webkit-box-shadow: var(--webkit-boxshadow);
+  border-radius: var(--border-radius-3);
+  position: absolute;
+  /*StartBoxPos*/
+  left: 20rem;
+  top: 10rem;
+  /*BoxSize*/
+  width: 420px;
+  height: 400px;
+  font-size: 0.9em;
+  border-radius: 100%;
+  background: radial-gradient(circle, rgba(31,31,31,0.7819502801120448) 89%, rgba(31,31,31,0) 100%);
+}
 /* Win -AppHeader */
 .win-prop .header {
   border-radius: var(--border-radius-3);
@@ -39,8 +56,10 @@
   font-size: 1rem;
   font-weight: 100;
   color: #c21423;
-  background: rgb(15, 15, 15);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  background: #1F1F1F;
+  -webkit-box-shadow: var(--webkit-boxshadow);
+	-moz-box-shadow: var(--moz-boxshadow);
+	box-shadow: var(--box-boxshadow);
 }
 /* Win -Close Button icon Init color */
 .close {
@@ -135,6 +154,9 @@
 /* Default SubFolder Size - Container*/
 .sub-folder { 
   height: 92%;
+  -webkit-box-shadow: var(--webkit-boxshadow-red);
+    -moz-box-shadow: var(--moz-boxshadow-red);
+    box-shadow: var(--box-boxshadow-red);
 }
 
 /* Default Icon Positions - Desktop */

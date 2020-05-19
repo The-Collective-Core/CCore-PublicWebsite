@@ -235,7 +235,10 @@ body > div.body-sub > nav > a > img {
 }
 /* Window Settings */
 .navbar{
-  background: rgb(15, 15, 15);
+  background: #1F1F1F;
+  -webkit-box-shadow: var(--webkit-boxshadow);
+	-moz-box-shadow: var(--moz-boxshadow);
+	box-shadow: var(--box-boxshadow);
   height: 2.5em;
 	color: rgb(255, 255, 255);
 	padding: 0rem 0rem;

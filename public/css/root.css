@@ -22,6 +22,7 @@
 /* Applications */
 @import url("assets-win/audio.css");
 @import url("assets-win/console.css");
+@import url("assets-win/window-hover.css");
 
 /* Assets Libraries */
 @import url("assets-base/base-page.css");
@@ -67,6 +68,13 @@
   --webkit-boxshadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   --moz-boxshadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
   --box-boxshadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+ /* Red Box Shadow */
+ --webkit-boxshadow-red: inset 0px 13px 17px -13px rgba(214,0,0,1);
+ --moz-boxshadow-red: inset 0px 13px 17px -13px rgba(214,0,0,1);
+ --box-boxshadow-red: inset 0px 13px 17px -13px rgba(214,0,0,1);
+    
+
 
   /* Border Properties */
   --border-radius-none:0rem;

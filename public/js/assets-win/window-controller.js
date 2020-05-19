@@ -196,6 +196,18 @@ var appController = new AppController();
 $(document).ready(initAppController);
 
 function initAppController() {
+	//Media Player App
+	appController.add({
+		id: "draggable-JS-MediaApp",
+		name: "MEDIAPLAYER",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/icon-discord.svg",
+		iconName: "MEDIAPLAYER",
+		iconParent: "containment-wrapper",
+		iconYDelta: 100,
+		appDesc: "Media Player",
+	});
 	//Discord application
 	appController.add({
 		id: "draggable-JS-00",
@@ -309,6 +321,21 @@ function initAppController() {
 		iconXDelta: 75,
 		appDesc:
 			"<strong>DIPLOMACY</strong> -The branch focused on diplomacy, roleplay and recruitment.</p>",
+	});
+
+
+	//About DEVS
+	appController.add({
+		id: "draggable-JS-Developers",
+		name: "DEVELOPERS",
+		onOpen: () => {},
+		onClose: () => {},
+		iconPath: "/img/images/vector-img/desktop/branches/DP.png",
+		iconName: "DEVELOPERS",
+		iconParent: "containment-wrapper",
+		iconYDelta: 100,
+		appDesc:
+			"About Developers",
 	});
 
 	appController.open("corecli");
