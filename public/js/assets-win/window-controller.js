@@ -211,7 +211,7 @@ function initAppController() {
 	//Command line app
 	appController.add({
 		id: "draggable-JS-01",
-		name: "CENTRAL MIND",
+		name: "CENTRALMIND",
 		onOpen: () => {},
 		onClose: () => {
 			// view.clearTerminal();
