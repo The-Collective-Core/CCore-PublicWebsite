@@ -1,3 +1,4 @@
+//Copyright 2019, Timothy Howard, strikeeaglechase#0001 , All rights reserved.
 let cliView;
 (function app() {
 	var event = {

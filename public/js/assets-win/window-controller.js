@@ -1,3 +1,4 @@
+//Copyright 2019, Timothy Howard, strikeeaglechase#0001 , All rights reserved.
 const DEFAULT_X_POS = 20;
 const DEFAULT_Y_POS = 35;
 const DEFAULT_WRAP_PT_X = 1000;
