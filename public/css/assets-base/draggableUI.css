@@ -25,12 +25,22 @@
   left: 20rem;
   top: 10rem;
   /*BoxSize*/
-  width: 420px;
-  height: 400px;
+ 
   font-size: 0.9em;
   background-color: rgba(29, 31, 32, 0.75);
 }
 
+/* Box Size */
+.box-sm {
+  width: 420px;
+  height: 400px;
+}
+.box-lg {
+  width: 840px;
+  height: 400px;
+}
+
+/* Media Player */
 .win-prop-circle {
   box-shadow: var(--box-boxshadow);
   -moz-box-shadow: var(--moz-boxshadow);
