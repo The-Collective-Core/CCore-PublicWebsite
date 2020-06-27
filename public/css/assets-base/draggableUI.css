@@ -40,6 +40,14 @@
   height: 400px;
 }
 
+/* Custom Box Resize */
+.box-resize {
+  width: 420px;
+  height: 400px;
+  resize: both;
+  overflow: auto;
+}
+
 /* Media Player */
 .win-prop-circle {
   box-shadow: var(--box-boxshadow);
@@ -55,7 +63,7 @@
   height: 400px;
   font-size: 0.9em;
   border-radius: 100%;
-  background: radial-gradient(circle, rgba(31,31,31,0.7819502801120448) 89%, rgba(31,31,31,0) 100%);
+  background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,0.7511379551820728) 30%, rgba(0,0,0,0.2413340336134454) 64%, rgba(0,0,0,0) 78%);
 }
 /* Win -AppHeader */
 .win-prop .header {

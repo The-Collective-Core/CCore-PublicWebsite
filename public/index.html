@@ -84,12 +84,26 @@
 			</a>
 
 			<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-			<div class="btn-group app-list">
-				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					APPS
-				</button>
-				<div class="dropdown-menu dropdown-menu-right" id="dropDownMenu"></div>
+				<div class="btn-group app-list">
+
+					<div class="navSelect1">
+						<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							APPS
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" id="dropDownMenu"></div>
+					</div>
+					<!-- 
+					<div class="navSelect2">
+						<div type="button" class="btn btn-secondary" id="loginButton">
+							<a href="https://discord.com/api/oauth2/authorize?client_id=721934090118496257&amp;redirect_uri=https%3A%2F%2Fwww.centralmind.net%2Fauth.php&amp;response_type=token&amp;scope=identify">
+							  <p id='loginButtonText'>Discord Login</p>
+							  <div class="button-solid"></div>
+							</a>
+						  </div>
+					</div>
+					-->
 			</div>
+			
 		</nav>
 		<!-- Containment -->
 		<div class="pages-stack">
@@ -97,7 +111,7 @@
 			<!-- Audio Player -->
 			<div class="page" id="page-home">
 				<div id="containment-wrapper">
-					
+
 					<!-- Desktop Drag -Icons -->
 					<div id="desktop-icons"></div>
 					<!-- Windows Applications-->
@@ -314,8 +328,6 @@
 										<a class="btn btn-lode btn-outline-lode" target="_blank" href="https://discord.gg/gD3EQCu">Discord</a>
 										<a class="btn btn-lode">-</a>
 										<a class="btn btn-lode btn-outline-lode" target="_blank" href="https://docs.google.com/document/d/1CbGqRYVEeDNeyX8ELoDF9kbnkh0Mu_VSpc4Qm3L248E/edit">Constitution</a>
-										<a class="btn btn-lode ">-</a>
-										<a class="btn btn-lode btn-outline-lode" target="_blank" href="https://www.guilded.gg/i/3E0w3obp">Guilded</a>
 									</div>
 								</div>
 							</div>
@@ -339,11 +351,11 @@
 						</div>
 					</div>
 					<!-- App -Console-->
-					<div id="draggable-JS-01" class="win-prop box-sm application-non-drag">
+					<div id="draggable-JS-01" class="win-prop box-resize application-non-drag">
 						<div class="header">
 							<div class="sub-menu-title">
 								<div class="icon"><img class="icon-img" src="/img/images/vector-img/desktop/centralmind.png" alt="Card image cap"></div>
-								<div class="text">Central Mind</div>
+								<div class="text">CENTRAL MIND</div>
 							</div>
 							<div class="buttons">
 								<div class="btn minus"> <i class="material-icons">remove</i></div>
@@ -372,8 +384,8 @@
 						<div class="form sub-folder" id="sub-folder-0"></div>
 					</div>
 
-					<!-- App -Random-->
-					<div id="draggable-JS-Developers" class="win-prop box-sm application-non-drag">
+					<!-- App -Random
+					<div id="draggable-JS-Developers" class="win-prop box-resize application-non-drag">
 						<div class="header">
 							<div class="sub-menu-title">
 								<div class="icon"><i class="material-icons">folder</i></div>
@@ -386,22 +398,20 @@
 							</div>
 						</div>
 						<div class="form sub-folder" id="sub-folder-0">
-
+							<h1>Under Construction</h1>
 						</div>
-					</div>
+					</div>-->
 
 					<!-- App -Random-->
 					<div id="draggable-JS-MediaApp" class="win-prop-circle application-non-drag">
 						<div class="header">
 
-							<div class="buttons">
-								<div class="btn minus"> <i class="material-icons">remove</i></div>
-								
-								<div id="close02" type="button" class="btn close"> <i class="material-icons">close</i></div>
-							</div>
+							
 						</div>
 						<div class="form">
+							
 							<div class="player">
+								
 								<canvas></canvas>
 								<div class="song">
 									<div class="artist">Kavinsky</div>
@@ -413,8 +423,18 @@
 									<div class="pause"></div>
 									<div class="nextSong"></div>
 								</div>
+								
+								
 								<input type="range" min="0" max="100" value="25" class="soundControl" id="volumeSelector">
+								<div class="btn minus"> 
+									<i class="material-icons">remove</i>
+								</div>
+
 								<div class="time">00:00</div>
+								
+								<div id="close02" type="button" class="btn close"> 
+									<i class="material-icons">close</i>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -422,7 +442,7 @@
 				</div>
 			</div>
 			<!-- /page -->
-
+			<script src="/js/discord-login.js"></script>
 			<script src="/js/assets-win/audio.js"></script>
 			<script src="js/assets-win/console.js"></script>
 			<script src="js/assets-win/window-hover.js"></script>

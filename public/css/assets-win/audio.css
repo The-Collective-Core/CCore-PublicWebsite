@@ -19,10 +19,10 @@ canvas {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	/*
-	background: url(/img/images/audio-player/audio-col-sym.svg) 40px 32px no-repeat; 
-	*/
+	background: url(/img/images/audio-player/audio-col-sym.svg) 11.5em 13.6em no-repeat;
 }
+
+
 
 .player .playarea {
 	position: absolute;
@@ -148,7 +148,7 @@ canvas {
 	text-align: center;
 	color: rgb(172, 0, 0);
 	position: absolute;
-	left: 45.6%;
+	left: 45%;
 	font-size: 2rem;
 	bottom: 190px;
 }

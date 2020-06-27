@@ -182,9 +182,9 @@ a:hover {
     display: none
 }
 /* BootRedo */
+
 .btn {
 	border-radius: var(--border-radius-none);
-	
 	padding: 0.2rem .75rem;
 }
 .dropdown-menu {
@@ -234,6 +234,11 @@ body > div.body-sub > nav > a > img {
     height: 30px;
     width: 30px;
 }
+
+.navselect1 {
+  height: 100%;
+
+}
 /* Window Settings */
 .navbar{
   background: #1F1F1F;
@@ -257,7 +262,6 @@ body > div.body-sub > nav > a > img {
 .title {
     font-family: var(--main-font);
     
-    background: rgb(15, 15, 15);
     color: rgb(255, 255, 255);
 	padding: 5px;
 	height: 26px;

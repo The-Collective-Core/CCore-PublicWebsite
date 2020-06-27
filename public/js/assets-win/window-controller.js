@@ -203,7 +203,7 @@ function initAppController() {
 		name: "MEDIAPLAYER",
 		onOpen: () => {},
 		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/icon-discord.svg",
+		iconPath: "/img/images/vector-img/desktop/record-vinyl.svg",
 		iconName: "MEDIAPLAYER",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
@@ -230,7 +230,7 @@ function initAppController() {
 			// view.clearTerminal();
 			out = "Type 'help' for more information.";
 		},
-		iconPath: "/img/images/vector-img/desktop/centralmind.png",
+		iconPath: "/img/images/vector-img/desktop/centralmind.svg",
 		iconName: "CENTRAL MIND",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,
@@ -326,18 +326,18 @@ function initAppController() {
 
 
 	//About DEVS
-	appController.add({
-		id: "draggable-JS-Developers",
-		name: "DEVELOPERS",
-		onOpen: () => {},
-		onClose: () => {},
-		iconPath: "/img/images/vector-img/desktop/branches/DP.png",
-		iconName: "DEVELOPERS",
-		iconParent: "containment-wrapper",
-		iconYDelta: 100,
-		appDesc:
-			"About Developers",
-	});
+	//appController.add({
+	//	id: "draggable-JS-Developers",
+	//	name: "DEVELOPERS",
+	//	onOpen: () => {},
+	//	onClose: () => {},
+	//	iconPath: "/img/images/vector-img/desktop/developers.png",
+	//	iconName: "DEVELOPERS",
+	//	iconParent: "containment-wrapper",
+	//	iconYDelta: 100,
+	//	appDesc:
+	//		"About Developers",
+	//});
 
 	appController.open("corecli");
 }

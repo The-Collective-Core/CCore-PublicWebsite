@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="514" height="514" viewBox="0 0 514 514">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="0.377" stop-color="#1c1c1c"/>
+      <stop offset="0.393" stop-color="#9f0000"/>
+      <stop offset="0.519" stop-color="#b50000"/>
+      <stop offset="0.577" stop-color="#1c1c1c"/>
+      <stop offset="0.908"/>
+      <stop offset="1" stop-color="#b00"/>
+      <stop offset="1"/>
+    </radialGradient>
+    <filter id="record-vinyl" x="0" y="0" width="514" height="514" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#record-vinyl)">
+    <path id="record-vinyl-2" data-name="record-vinyl" d="M256,152A104,104,0,1,0,360,256,104,104,0,0,0,256,152Zm0,128a24,24,0,1,1,24-24A24,24,0,0,1,256,280ZM256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm0,376A128,128,0,1,1,384,256,128,128,0,0,1,256,384Z" transform="translate(1 1)" fill="url(#radial-gradient)"/>
+  </g>
+</svg>
