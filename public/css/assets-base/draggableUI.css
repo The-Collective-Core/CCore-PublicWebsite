@@ -47,6 +47,12 @@
   resize: both;
   overflow: auto;
 }
+.box-resize-term {
+  width: 500px;
+  height: 400px;
+  resize: both;
+  overflow: auto;
+}
 
 /* Media Player */
 .win-prop-circle {
