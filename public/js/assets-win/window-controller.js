@@ -230,7 +230,7 @@ function initAppController() {
 			// view.clearTerminal();
 			out = "Type 'help' for more information.";
 		},
-		iconPath: "/img/images/vector-img/desktop/centralmind.svg",
+		iconPath: "/img/images/vector-img/desktop/centralmind.png",
 		iconName: "CENTRAL MIND",
 		iconParent: "containment-wrapper",
 		iconYDelta: 100,

@@ -197,3 +197,27 @@ canvas {
 	border-radius: var(--border-radius-3);
 	cursor: pointer;
   }
+
+
+
+    /* Audio Menu Control */
+	.audio-btn {
+		margin-top: 19em;
+	  }
+	  #close02 {
+		position: absolute;
+		display: block;
+		z-index: 1;
+		left: 7.8em;
+		top: 0.3em;
+	  }
+	  .audio-min {
+		position: absolute;
+		display: block;
+		z-index: 1;
+		left: 7em;
+	  }
+	  #draggable-JS-MediaApp > div.header > div > div.btn.minus.audio-min {
+		color: #ffffff;
+	  }
+	  

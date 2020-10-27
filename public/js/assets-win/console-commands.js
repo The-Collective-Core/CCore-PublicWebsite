@@ -158,6 +158,34 @@ commandHandler.add({
 		'<img style="width:6em;" src="../../img/images/commands/honk.png"></img>',
 });
 commandHandler.add({
+	name: "chip",
+	helpMsg: "",
+	extendedHelp: "",
+	run: () =>
+		'<img style="width:6em;" src="../../img/images/commands/chip.gif"></img>',
+});
+commandHandler.add({
+	name: "pope",
+	helpMsg: "",
+	extendedHelp: "",
+	run: () =>
+		'<img style="width:6em;" src="../../img/images/commands/pope.png"></img>',
+});
+commandHandler.add({
+	name: "power",
+	helpMsg: "",
+	extendedHelp: "",
+	run: () =>
+		'<img style="width:6em;" src="../../img/images/commands/senate.png"></img>',
+});
+commandHandler.add({
+	name: "power",
+	helpMsg: "",
+	extendedHelp: "",
+	run: () =>
+		'<img style="width:6em;" src="../../img/images/commands/senate.png"></img>',
+});
+commandHandler.add({
 	name: "purge",
 	helpMsg: "",
 	extendedHelp: "",

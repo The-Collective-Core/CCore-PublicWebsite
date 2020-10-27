@@ -10,6 +10,7 @@
   overflow-x: hidden;
     color: rgb(255, 0, 0);
     font-family: var(--sub-font);
+    font-weight: bold;
     font-size: 1.3rem;
     height: 92%;
     width: 100%;
