@@ -186,6 +186,13 @@ commandHandler.add({
 		'<img style="width:6em;" src="../../img/images/commands/senate.png"></img>',
 });
 commandHandler.add({
+	name: "egg",
+	helpMsg: "",
+	extendedHelp: "",
+	run: () =>
+		'<img style="width:6em;" src="../../img/images/commands/egg.png"></img>',
+});
+commandHandler.add({
 	name: "purge",
 	helpMsg: "",
 	extendedHelp: "",
